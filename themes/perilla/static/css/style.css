@@ -131,10 +131,41 @@ p {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
 }
+.article__body h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+.article__body h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+.article__body h5 {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+.article__body h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
 .article__body ul,
 .article__body ol {
   margin-bottom: var(--space-md);
   padding-left: var(--space-lg);
+}
+.article__body ul {
+  list-style: none;
+}
+.article__body ul li::before {
+  content: "*";
+  color: var(--color-accent);
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 .article__body blockquote {
   border-left: 3px solid var(--color-accent);

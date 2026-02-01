@@ -1,12 +1,12 @@
 # ============================================================
 # Example config.toml — copy into your Hugo site root
-# and set theme = "surrealist-hugo" (or whatever you name the folder)
+# and set theme = "perilla" (or whatever you name the folder)
 # ============================================================
 
 baseURL      = "https://yoursite.com/"
 languageCode = "en-US"
 title        = "Your Site Title"
-theme        = "surrealist-hugo"
+theme        = "perilla"
 
 # ──────────────────────────────────────────
 # Theme Parameters
@@ -22,7 +22,7 @@ theme        = "surrealist-hugo"
   menuButtonLabel = "Explore"                  # Text on the menu button beneath the title
 
   # Footer
-  footerNote      = "Built with Hugo &amp; the Surrealist theme."
+  footerNote      = "Built with Hugo &amp; the Perilla theme."
 
 # ──────────────────────────────────────────
 # Navigation Menu

@@ -16,7 +16,7 @@ The theme uses no Sass or special pipelines — the plain `hugo` binary is all y
 ## 2. Run the dev server
 
 ```bash
-cd my-surrealist-site
+cd perilla
 hugo server
 ```
 
@@ -35,7 +35,7 @@ Hugo's built-in live reload will **automatically refresh the page** whenever you
 | Homepage hero text | `config.toml` → `heroTitle` / `heroSubtitle` |
 | Blog posts | `content/blog/*.md` — add or edit any `.md` file here |
 | About / Portfolio / Contact pages | `content/about/index.md`, etc. |
-| Colors, fonts, spacing | `themes/surrealist-hugo/static/css/style.css` → `:root` block at the top |
+| Colors, fonts, spacing | `themes/perilla/static/css/style.css` → `:root` block at the top |
 | Custom CSS overrides (without touching theme files) | Create `static/css/custom.css` in the site root |
 | Hero background image | Drop a new image into `static/images/` and update `heroImage` in `config.toml` |
 
@@ -68,7 +68,7 @@ Your content here.
 ## 5. File structure at a glance
 
 ```
-my-surrealist-site/
+perilla/
 ├── config.toml                          ← site config + theme params
 ├── static/
 │   └── images/
@@ -82,7 +82,7 @@ my-surrealist-site/
 │   ├── portfolio/index.md
 │   └── contact/index.md
 └── themes/
-    └── surrealist-hugo/                 ← the theme (don't need to touch this)
+    └── perilla/                 ← the theme (don't need to touch this)
         ├── layouts/
         ├── static/css/style.css
         └── theme.toml

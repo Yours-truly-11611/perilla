@@ -1,4 +1,4 @@
-# Surrealist Hugo Theme
+# Perilla Theme
 
 A Hugo theme inspired by the [Surrealist WordPress theme](https://wordpress.org/themes/surrealist/) by Automattic. Features a full-viewport tinted hero landing page, a full-screen navigation overlay, and a clean, responsive blog layout built around warm earthy tones and elegant serif typography.
 
@@ -10,12 +10,12 @@ A Hugo theme inspired by the [Surrealist WordPress theme](https://wordpress.org/
    ```
    your-hugo-site/
    └── themes/
-       └── surrealist-hugo/      ← this folder
+       └── perilla/      ← this folder
    ```
 
 2. **Set the theme** in your site's `config.toml`:
    ```toml
-   theme = "surrealist-hugo"
+   theme = "perilla"
    ```
 
 3. **Add your hero image.** Place a high-resolution landscape image at:
@@ -73,7 +73,7 @@ Populate the overlay menu by adding `[[menu.main]]` entries in your `config.toml
 ## Theme Structure
 
 ```
-surrealist-hugo/
+perilla/
 ├── layouts/
 │   ├── baseof.html                  # Root HTML shell
 │   ├── index.html                   # Homepage (hero landing page)

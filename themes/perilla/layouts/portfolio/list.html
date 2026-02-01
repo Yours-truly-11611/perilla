@@ -1,22 +1,36 @@
 {{ define "main" }}
 {{ if .Params.heroImage }}
-<section class="hero{{ if not .Params.heroFull }} hero--half{{ end }}" aria-label="{{ .Title }} hero">
-  <div class="hero__bg"
-       style="background-image: url('{{ .Params.heroImage | relURL }}');
-              background-color: {{ .Params.heroTintColor | default "rgba(30,20,40,0.55)" }};">
-  </div>
-  <div class="hero__content">
-    <h1 class="hero__title">{{ .Title }}</h1>
-    {{ with .Params.heroSubtitle }}
-      <p class="hero__subtitle">{{ . }}</p>
-    {{ end }}
-  </div>
-  <a href="#page-content" class="hero__scroll-hint" aria-label="Scroll to content">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </a>
-</section>
+  {{ if .Params.heroFull }}
+  <section class="hero" aria-label="{{ .Title }} hero">
+    <div class="hero__bg"
+         style="background-image: url('{{ .Params.heroImage | relURL }}');
+                background-color: {{ .Params.heroTintColor | default "rgba(30,20,40,0.55)" }};">
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">{{ .Title }}</h1>
+      {{ with .Params.heroSubtitle }}
+        <p class="hero__subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+    <a href="#page-content" class="hero__scroll-hint" aria-label="Scroll to content">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
+  {{ else }}
+  <section class="hero-split" aria-label="{{ .Title }} hero">
+    <div class="hero-split__title-block">
+      <h1 class="hero-split__title">{{ .Title }}</h1>
+      {{ with .Params.heroSubtitle }}
+        <p class="hero-split__subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="hero-split__image">
+      <img src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+    </div>
+  </section>
+  {{ end }}
 {{ end }}
 
 <main id="page-content" class="site-content">

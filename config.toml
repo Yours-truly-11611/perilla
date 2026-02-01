@@ -4,6 +4,7 @@ title        = "Alexandria"
 theme        = "perilla"
 
 [params]
+  # googleAnalytics = "G-XXXXXXXXXX"
   description     = "Writing, design, and creative exploration."
   heroTitle       = "Alexandria"
   heroSubtitle    = "Writing & Design"

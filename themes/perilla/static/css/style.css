@@ -198,9 +198,74 @@ p {
   justify-content: center;
   overflow: hidden;
 }
-.hero--half {
-  height: 50vh;
-  min-height: 280px;
+/* ---- Split hero (blog posts, portfolio, etc.) ---- */
+
+/* Mobile: stacked — title block on top, image below */
+.hero-split {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.hero-split__title-block {
+  background-color: var(--color-overlay-bg);
+  color: var(--color-overlay-text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: calc(var(--space-2xl) + 44px) var(--space-lg) var(--space-xl);
+  aspect-ratio: 1 / 0.5;
+  width: 100%;
+}
+.hero-split__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  font-weight: 400;
+  color: var(--color-overlay-text);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-sm);
+}
+.hero-split__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.82rem, 1.8vw, 1rem);
+  color: rgba(245, 222, 179, 0.7);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.hero-split__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.hero-split__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Desktop: side-by-side columns, each 50% */
+@media (min-width: 768px) {
+  .hero-split {
+    flex-direction: row;
+    height: 50vh;
+    min-height: 360px;
+  }
+  .hero-split__title-block {
+    width: 50%;
+    aspect-ratio: auto;
+    padding: var(--space-xl) var(--space-lg);
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero-split__image {
+    width: 50%;
+    aspect-ratio: auto;
+    height: 100%;
+  }
 }
 
 /* Background image layer */
@@ -775,7 +840,44 @@ body.has-hero:not(.scrolled) .topbar__search-btn {
 
 
 /* ============================================================
-  12. RESPONSIVE OVERRIDES
+  13. LIGHTBOX
+   ============================================================ */
+.hero-split__image[role="button"] {
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.lightbox.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+.lightbox__img {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+
+/* ============================================================
+  14. RESPONSIVE OVERRIDES
    ============================================================ */
 
 /* Small mobile */

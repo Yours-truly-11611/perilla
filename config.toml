@@ -1,7 +1,7 @@
 baseURL      = "/"
 languageCode = "en-US"
 title        = "Alexandria"
-theme        = "surrealist-hugo"
+theme        = "perilla"
 
 [params]
   description     = "Writing, design, and creative exploration."
@@ -10,7 +10,7 @@ theme        = "surrealist-hugo"
   heroImage       = "images/backgrounds/jungle-sun.jpg"
   heroTintColor   = "rgba(30, 20, 40, 0.55)"
   menuButtonLabel = "Explore"
-  footerNote      = "Built with Hugo &amp; the Surrealist theme."
+  footerNote      = "Built with Hugo &amp; the Perilla theme."
 
 [[menu.main]]
   name   = "About"

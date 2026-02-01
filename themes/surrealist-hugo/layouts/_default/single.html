@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main class="site-content">
+  <div class="container">
+    <article class="article">
+      <header class="article__header">
+        <h1 class="article__title">{{ .Title }}</h1>
+        {{ if not .IsPage }}
+          <time class="article__date" datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "January 2, 2006" }}
+          </time>
+        {{ end }}
+      </header>
+
+      <div class="article__body">
+        {{ .Content }}
+      </div>
+    </article>
+
+    <!-- Back link -->
+    <a href="{{ "/" | relURL }}" class="article__back">&larr; Back</a>
+  </div>
+</main>
+{{ end }}

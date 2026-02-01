@@ -1,0 +1,14 @@
+<!-- Open Graph / Social Meta -->
+<meta property="og:title"       content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:type"        content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url"         content="{{ .Permalink }}" />
+{{ with .Site.Params.heroImage }}
+  <meta property="og:image" content="{{ . | relURL }}" />
+{{ end }}
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Favicon (place your favicon.ico in static/) -->
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" />

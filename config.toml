@@ -1,0 +1,38 @@
+baseURL      = "/"
+languageCode = "en-US"
+title        = "Alexandria"
+theme        = "surrealist-hugo"
+
+[params]
+  description     = "Writing, design, and creative exploration."
+  heroTitle       = "Alexandria"
+  heroSubtitle    = "Writing & Design"
+  heroImage       = "images/backgrounds/jungle-sun.jpg"
+  heroTintColor   = "rgba(30, 20, 40, 0.55)"
+  menuButtonLabel = "Explore"
+  footerNote      = "Built with Hugo &amp; the Surrealist theme."
+
+[[menu.main]]
+  name   = "About"
+  url    = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name   = "Blog"
+  url    = "/blog/"
+  weight = 2
+
+[[menu.main]]
+  name   = "Portfolio"
+  url    = "/portfolio/"
+  weight = 3
+
+[[menu.main]]
+  name   = "Elements"
+  url    = "/elements/"
+  weight = 4
+
+[[menu.main]]
+  name   = "Contact"
+  url    = "/contact/"
+  weight = 5

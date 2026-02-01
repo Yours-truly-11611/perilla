@@ -36,3 +36,9 @@ theme        = "surrealist-hugo"
   name   = "Contact"
   url    = "/contact/"
   weight = 5
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "JSON"]

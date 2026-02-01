@@ -1,6 +1,10 @@
 ---
 title: "About"
 date: 2025-01-15
+heroImage: "images/backgrounds/wild-strawberries.jpg"
+heroFull: true
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+heroSubtitle: "Writer, illustrator, and curious human"
 ---
 
 ## Hi, I'm Alexandria

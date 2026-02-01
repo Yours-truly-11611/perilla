@@ -1,6 +1,9 @@
 ---
 title: "Contact"
 date: 2025-01-01
+heroImage: "images/backgrounds/cloud-world.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+heroSubtitle: "Say hello"
 ---
 
 ## Let's talk

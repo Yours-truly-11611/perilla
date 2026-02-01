@@ -390,6 +390,10 @@ p {
   gap: 5px;
   pointer-events: auto;
 }
+/* Hide hamburger on the home page */
+body.is-home .hamburger {
+  display: none;
+}
 .hamburger__line {
   display: block;
   width: 24px;

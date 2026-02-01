@@ -38,6 +38,10 @@ theme        = "perilla"
   url    = "/contact/"
   weight = 5
 
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+
 [markup.goldmark.renderer]
   unsafe = true
 

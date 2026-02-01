@@ -840,7 +840,152 @@ body.has-hero:not(.scrolled) .topbar__search-btn {
 
 
 /* ============================================================
-  13. LIGHTBOX
+  13. BLOG TABS
+   ============================================================ */
+.blog-tabs {
+  display: flex;
+  background-color: var(--color-accent);
+  margin: 0;
+  padding: 0;
+}
+.blog-tabs__tab {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-lg);
+  position: relative;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.blog-tabs__tab:last-child,
+.blog-tabs__dropdown:last-child .blog-tabs__tab {
+  border-right: none;
+}
+.blog-tabs__tab:hover {
+  color: #fff;
+  background-color: var(--color-accent-hover);
+  text-decoration: none;
+}
+.blog-tabs__tab.is-active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Categories dropdown */
+.blog-tabs__dropdown {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.blog-tabs__dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  border: none;
+  border-right: none;
+  cursor: pointer;
+}
+.blog-tabs__chevron {
+  stroke: rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease;
+}
+.blog-tabs__dropdown-trigger:hover .blog-tabs__chevron,
+.blog-tabs__dropdown-trigger.is-active .blog-tabs__chevron {
+  stroke: #fff;
+}
+.blog-tabs__dropdown.is-open .blog-tabs__chevron {
+  transform: rotate(180deg);
+}
+.blog-tabs__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--color-bg);
+  border: 1px solid rgba(44, 36, 32, 0.12);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: var(--space-xs) 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 50;
+}
+.blog-tabs__dropdown.is-open .blog-tabs__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.blog-tabs__dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.blog-tabs__dropdown-item:hover {
+  background: rgba(196, 122, 90, 0.08);
+  text-decoration: none;
+}
+.blog-tabs__dropdown-item--empty {
+  color: var(--color-text-muted);
+  cursor: default;
+}
+.blog-tabs__dropdown-item--all {
+  border-top: 1px solid rgba(44, 36, 32, 0.08);
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.blog-tabs__dropdown-count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.blog-tabs__empty {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  grid-column: 1 / -1;
+}
+
+/* Taxonomy chips */
+.taxonomy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.taxonomy-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid rgba(44, 36, 32, 0.15);
+  border-radius: 2em;
+  font-size: 0.88rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.taxonomy-chip:hover {
+  border-color: var(--color-accent);
+  background: rgba(196, 122, 90, 0.08);
+  text-decoration: none;
+}
+.taxonomy-chip__count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================================
+  14. LIGHTBOX
    ============================================================ */
 .hero-split__image[role="button"] {
   cursor: pointer;

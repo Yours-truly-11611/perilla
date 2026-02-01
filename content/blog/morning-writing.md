@@ -5,6 +5,9 @@ image: "/images/backgrounds/morning-hopper.jpg"
 heroImage: "/images/backgrounds/morning-hopper.jpg"
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "The best writing I do happens in a narrow window — after the coffee, before the chaos. Here's why I protect it like it's sacred."
+popular: true
+categories: ["Writing"]
+tags: ["minimalism", "morning routine"]
 ---
 
 My daughter wakes up at 6:15, give or take. Some mornings it's 5:50 and I hear her talking to herself through the baby monitor, a long monologue in a language that isn't quite English yet. Other mornings she sleeps until almost 7 and I feel like I've been given an unexpected gift.

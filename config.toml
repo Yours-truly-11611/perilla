@@ -1,4 +1,4 @@
-baseURL      = "/"
+baseURL      = "https://alexagain.com/"
 languageCode = "en-US"
 title        = "Alexandria"
 theme        = "perilla"
@@ -11,7 +11,7 @@ theme        = "perilla"
   heroImage       = "images/backgrounds/jungle-sun.jpg"
   heroTintColor   = "rgba(30, 20, 40, 0.55)"
   menuButtonLabel = "Explore"
-  footerNote      = "Built with Hugo &amp; the Perilla theme."
+  footerNote      = "Built with love, Hugo, &amp; the Perilla theme."
 
 [[menu.main]]
   name   = "About"

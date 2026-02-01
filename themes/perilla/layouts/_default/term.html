@@ -16,7 +16,10 @@
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <div class="lightbox__backdrop"></div>
-  <img class="lightbox__img" src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
+  <div class="lightbox__content">
+    <img class="lightbox__img" src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
+    {{ with .Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
+  </div>
 </div>
 
 {{ partial "blog-tabs.html" . }}

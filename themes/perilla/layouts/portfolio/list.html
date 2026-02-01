@@ -26,12 +26,46 @@
         <p class="hero-split__subtitle">{{ . }}</p>
       {{ end }}
     </div>
-    <div class="hero-split__image">
+    <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
       <img src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
     </div>
   </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop"></div>
+    <div class="lightbox__content">
+      <img class="lightbox__img" src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+      {{ with .Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
+    </div>
+  </div>
   {{ end }}
 {{ end }}
+
+<script>
+(function () {
+  var trigger = document.querySelector('.hero-split__image');
+  var lightbox = document.getElementById('lightbox');
+  if (!trigger || !lightbox) return;
+
+  function open() {
+    lightbox.classList.add('is-active');
+    lightbox.setAttribute('aria-hidden', 'false');
+  }
+  function close() {
+    lightbox.classList.remove('is-active');
+    lightbox.setAttribute('aria-hidden', 'true');
+  }
+
+  trigger.addEventListener('click', open);
+  trigger.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+  });
+  lightbox.querySelector('.lightbox__backdrop').addEventListener('click', close);
+  lightbox.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
 
 <main id="page-content" class="site-content">
   <div class="container">

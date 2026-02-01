@@ -2,6 +2,8 @@
 title: "On Writing in the Early Morning, Before the House Wakes Up"
 date: 2025-01-10
 image: "/images/backgrounds/morning-hopper.jpg"
+heroImage: "/images/backgrounds/morning-hopper.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "The best writing I do happens in a narrow window — after the coffee, before the chaos. Here's why I protect it like it's sacred."
 ---
 

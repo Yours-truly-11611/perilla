@@ -1,6 +1,9 @@
 ---
 title: "Elements"
 description: "A style guide showcasing all typographic and content elements."
+heroImage: "images/backgrounds/blind-mans-bluff.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+heroSubtitle: "Theme style guide"
 ---
 
 # Heading One

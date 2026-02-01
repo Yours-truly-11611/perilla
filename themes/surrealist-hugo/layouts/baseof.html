@@ -19,6 +19,9 @@
   <!-- Kame is self-hosted or replaced — using a similar whimsical serif as fallback -->
   <!-- If you have Kame .woff2 files, place them in static/fonts/ and uncomment the @font-face in style.css -->
 
+  <!-- Fuse.js for search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+
   <!-- Theme stylesheet -->
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
 
@@ -30,7 +33,7 @@
   <!-- Head extras partial (for Open Graph, schema, etc.) -->
   {{ partial "head-extras.html" . }}
 </head>
-<body>
+<body{{ if or .IsHome .Params.heroImage }} class="has-hero"{{ end }}>
   <!-- Top bar with logo + hamburger -->
   <div class="topbar">
     {{ if not .IsHome }}
@@ -42,6 +45,12 @@
     {{ else }}
       <span class="topbar__spacer"></span>
     {{ end }}
+    <a href="/search/" class="topbar__search-btn" aria-label="Search">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </a>
   </div>
 
   {{/* Hamburger / nav overlay — rendered on every page */}}
@@ -52,5 +61,104 @@
 
   <!-- Footer partial -->
   {{ partial "footer.html" . }}
+
+  <script>
+  (function() {
+    var fuseInstance = null;
+    var indexLoaded = false;
+
+    function loadIndex() {
+      if (indexLoaded) return Promise.resolve();
+      indexLoaded = true;
+      return fetch('/index.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          fuseInstance = new Fuse(data, {
+            keys: ['title', 'summary'],
+            threshold: 0.4,
+            ignoreLocation: true
+          });
+        });
+    }
+
+    function renderResults(results, container) {
+      container.innerHTML = '';
+      if (!results.length) return;
+      var seen = {};
+      results.forEach(function(r) {
+        if (seen[r.item.permalink]) return;
+        seen[r.item.permalink] = true;
+        var item = r.item;
+        var li = document.createElement('li');
+        li.className = 'search-results__item';
+        var a = document.createElement('a');
+        a.href = item.permalink;
+        a.className = 'search-results__link';
+        var title = document.createElement('span');
+        title.className = 'search-results__title';
+        title.textContent = item.title;
+        var summary = document.createElement('span');
+        summary.className = 'search-results__summary';
+        summary.textContent = item.summary ? item.summary.substring(0, 150) + '...' : '';
+        a.appendChild(title);
+        a.appendChild(summary);
+        li.appendChild(a);
+        container.appendChild(li);
+      });
+    }
+
+    function doSearch(query, container, statusEl) {
+      if (!query || !fuseInstance) {
+        container.innerHTML = '';
+        if (statusEl) statusEl.textContent = query ? '' : '';
+        return;
+      }
+      var results = fuseInstance.search(query);
+      var unique = [];
+      var seen = {};
+      results.forEach(function(r) {
+        if (!seen[r.item.permalink]) { seen[r.item.permalink] = true; unique.push(r); }
+      });
+      if (statusEl) {
+        statusEl.textContent = unique.length ? unique.length + ' result' + (unique.length === 1 ? '' : 's') + ' found' : 'No results found';
+      }
+      renderResults(unique, container);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Search page
+      var pageInput = document.getElementById('searchPageInput');
+      var pageResults = document.getElementById('searchPageResults');
+      var pageStatus = document.getElementById('searchPageStatus');
+      if (pageInput) {
+        var params = new URLSearchParams(window.location.search);
+        var initialQuery = params.get('q') || '';
+        if (initialQuery) pageInput.value = initialQuery;
+
+        loadIndex().then(function() {
+          if (initialQuery) doSearch(initialQuery, pageResults, pageStatus);
+        });
+
+        pageInput.addEventListener('input', function() {
+          var q = pageInput.value.trim();
+          var url = q ? '/search/?q=' + encodeURIComponent(q) : '/search/';
+          history.replaceState(null, '', url);
+          doSearch(q, pageResults, pageStatus);
+        });
+      }
+
+      // Footer search — navigate to search page on Enter
+      var footerInput = document.getElementById('footerSearchInput');
+      if (footerInput) {
+        footerInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            var q = footerInput.value.trim();
+            if (q) window.location.href = '/search/?q=' + encodeURIComponent(q);
+          }
+        });
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -198,6 +198,10 @@ p {
   justify-content: center;
   overflow: hidden;
 }
+.hero--half {
+  height: 50vh;
+  min-height: 280px;
+}
 
 /* Background image layer */
 .hero__bg {
@@ -330,8 +334,8 @@ p {
   border-radius: 1px;
 }
 
-/* On homepage hero, lines are white */
-body:not(.scrolled) .hamburger__line {
+/* On homepage hero (before scrolling past it), lines are white */
+body.has-hero:not(.scrolled) .hamburger__line {
   background-color: rgba(255,255,255,0.85);
 }
 
@@ -654,7 +658,124 @@ body.nav-is-open .hamburger__line:nth-child(3) {
 
 
 /* ============================================================
-  11. RESPONSIVE OVERRIDES
+  11. SEARCH
+   ============================================================ */
+
+/* Topbar search button — sits to the left of the hamburger */
+.topbar__search-btn {
+  position: fixed;
+  top: var(--space-md);
+  right: calc(var(--space-lg) + 48px);
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+body.has-hero:not(.scrolled) .topbar__search-btn {
+  color: rgba(255,255,255,0.85);
+}
+.topbar__search-btn:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Search page */
+.search-page__title {
+  margin-bottom: var(--space-md);
+}
+.search-page__input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  border: 1.5px solid rgba(44,36,32,0.2);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.search-page__input:focus {
+  border-color: var(--color-accent);
+}
+.search-page__status {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  min-height: 1.4em;
+}
+
+/* Search results list */
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0;
+}
+.search-results__item {
+  border-bottom: 1px solid rgba(44,36,32,0.08);
+}
+.search-results__item:last-child {
+  border-bottom: none;
+}
+.search-results__link {
+  display: block;
+  padding: var(--space-md) var(--space-xs);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background 0.15s ease;
+}
+.search-results__link:hover {
+  background: rgba(196,122,90,0.08);
+  text-decoration: none;
+}
+.search-results__title {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.search-results__summary {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Footer search */
+.footer__search {
+  margin-bottom: var(--space-md);
+}
+.footer__search-input {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  border: 1px solid rgba(240,235,229,0.2);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.06);
+  color: rgba(240,235,229,0.85);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.footer__search-input::placeholder {
+  color: rgba(240,235,229,0.35);
+}
+.footer__search-input:focus {
+  border-color: var(--color-accent);
+}
+
+
+/* ============================================================
+  12. RESPONSIVE OVERRIDES
    ============================================================ */
 
 /* Small mobile */

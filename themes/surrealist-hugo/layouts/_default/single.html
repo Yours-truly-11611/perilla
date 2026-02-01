@@ -1,7 +1,28 @@
 {{ define "main" }}
-<main class="site-content">
+{{ if .Params.heroImage }}
+<section class="hero{{ if not .Params.heroFull }} hero--half{{ end }}" aria-label="{{ .Title }} hero">
+  <div class="hero__bg"
+       style="background-image: url('{{ .Params.heroImage | relURL }}');
+              background-color: {{ .Params.heroTintColor | default "rgba(30,20,40,0.55)" }};">
+  </div>
+  <div class="hero__content">
+    <h1 class="hero__title">{{ .Title }}</h1>
+    {{ with .Params.heroSubtitle }}
+      <p class="hero__subtitle">{{ . }}</p>
+    {{ end }}
+  </div>
+  <a href="#page-content" class="hero__scroll-hint" aria-label="Scroll to content">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </a>
+</section>
+{{ end }}
+
+<main id="page-content" class="site-content">
   <div class="container">
     <article class="article">
+      {{ if not .Params.heroImage }}
       <header class="article__header">
         <h1 class="article__title">{{ .Title }}</h1>
         {{ if not .IsPage }}
@@ -10,6 +31,7 @@
           </time>
         {{ end }}
       </header>
+      {{ end }}
 
       <div class="article__body">
         {{ .Content }}

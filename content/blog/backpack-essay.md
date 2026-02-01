@@ -2,6 +2,8 @@
 title: "What a 32-Liter Backpack Taught Me About Wanting Things"
 date: 2025-01-20
 image: "/images/backgrounds/ground-swell.jpg"
+heroImage: "/images/backgrounds/ground-swell.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Two years of carrying everything I owned in a single bag turned out to be less about minimalism and more about paying attention."
 ---
 

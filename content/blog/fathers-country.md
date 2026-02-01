@@ -2,6 +2,8 @@
 title: "The Country on My Father's Passport"
 date: 2024-12-28
 image: "/images/backgrounds/taiwancliff.jpg"
+heroImage: "/images/backgrounds/taiwancliff.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Visiting the place my family came from didn't answer the questions I thought it would. It asked better ones."
 ---
 

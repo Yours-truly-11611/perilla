@@ -1,11 +1,18 @@
 ---
-title: "The Country on My Father's Passport"
-date: 2024-12-28
-image: "/images/backgrounds/taiwancliff.jpg"
-heroImage: "/images/backgrounds/taiwancliff.jpg"
+title: The Country on My Father's Passport
+description:
+tags:
+date: 2024-12-28T05:00:00.000Z
+draft: false
+categories:
+lastmod: 2026-02-02T13:09:01.426811Z
+image: /images/backgrounds/autumn.jpg
+heroImage: /images/backgrounds/autumn.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
-summary: "Visiting the place my family came from didn't answer the questions I thought it would. It asked better ones."
+summary: Visiting the place my family came from didn't answer the questions I thought it would. It asked better ones.
+
 ---
+
 
 I was twenty-six when I first went to Greece. Not the Greece of tourists — the whitewashed islands, the sunsets over the Aegean, all of that. I went to a small town in the northern interior where my father grew up, where his mother still lived in a house with thick stone walls and a garden full of things I couldn't name.
 

@@ -421,7 +421,13 @@ p {
   gap: 5px;
   pointer-events: auto;
 }
-/* Hide hamburger on the home page */
+/* Lock scrolling and hide hamburger on the home page */
+body.is-home {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 body.is-home .hamburger {
   display: none;
 }

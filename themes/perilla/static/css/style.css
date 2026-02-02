@@ -702,6 +702,13 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   padding: var(--space-md) var(--space-lg);
   pointer-events: none;
 }
+body:not(.is-home) .topbar {
+  pointer-events: auto;
+  background: rgba(58, 28, 58, 0.55);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 .topbar__logo,
 .topbar__spacer {
   pointer-events: auto;

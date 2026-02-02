@@ -8,7 +8,9 @@ categories = ['travel', 'personal']
 author = 'Alex'
 keywords = ['long term solo travel', 'solo travel', 'solo female traveler']
 lastmod = '2026-01-25T16:07:41.123263Z'
-banner = 'img/taiwanfire.jpg'
+image = '/images/backgrounds/jungle-sun.jpg'
+heroImage = '/images/backgrounds/jungle-sun.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

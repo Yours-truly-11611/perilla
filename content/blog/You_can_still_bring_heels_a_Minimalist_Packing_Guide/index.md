@@ -8,6 +8,9 @@ categories = ['travel', 'gear']
 author = 'Alex'
 lastmod = '2026-01-25T03:26:42.493583Z'
 toc = true
+image = '/images/backgrounds/wild-strawberries.jpg'
+heroImage = '/images/backgrounds/wild-strawberries.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

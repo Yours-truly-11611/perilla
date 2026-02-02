@@ -8,7 +8,9 @@ categories = ['personal']
 author = 'Alex'
 lastmod = '2026-01-28T22:36:38.152358Z'
 toc = true
-banner = ''
+image = '/images/backgrounds/tug-of-war.jpg'
+heroImage = '/images/backgrounds/tug-of-war.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

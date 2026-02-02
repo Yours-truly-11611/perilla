@@ -8,6 +8,9 @@ toc = true
 categories = []
 author = 'Alex'
 lastmod = '2025-12-18T02:54:40.008905Z'
+image = '/images/backgrounds/blind-mans-bluff.jpg'
+heroImage = '/images/backgrounds/blind-mans-bluff.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

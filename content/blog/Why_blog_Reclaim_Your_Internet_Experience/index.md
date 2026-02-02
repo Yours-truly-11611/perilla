@@ -7,6 +7,9 @@ draft = true
 categories = ['budding']
 author = 'Alex'
 lastmod = '2026-01-26T18:34:13.291942Z'
+image = '/images/backgrounds/windmill.jpg'
+heroImage = '/images/backgrounds/windmill.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

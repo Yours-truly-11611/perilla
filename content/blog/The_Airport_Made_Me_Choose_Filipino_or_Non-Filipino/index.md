@@ -9,6 +9,9 @@ author = 'Alex'
 keywords = ['third culture kid', 'Filipino diaspora', 'Filipino American identity', 'visiting the Philippines for the first time', 'not speaking Tagalog in the Philippines', 'identity crisis', 'belonging and identity', 'Baguio', 'Philippines', 'Filipino culture']
 lastmod = '2026-01-25T03:23:47.178951Z'
 toc = false
+image = '/images/backgrounds/bathing.jpg'
+heroImage = '/images/backgrounds/bathing.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

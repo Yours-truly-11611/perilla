@@ -1,5 +1,5 @@
 +++
-title = 'Introversion is Overrated '
+title = 'Introversion is Overrated'
 description = ''
 tags = ['journal']
 date = '2025-11-20T16:09:42.035549Z'
@@ -7,6 +7,9 @@ draft = false
 categories = []
 author = 'Alex'
 lastmod = '2025-11-20T16:10:31.725373Z'
+image = '/images/backgrounds/tea-things.jpg'
+heroImage = '/images/backgrounds/tea-things.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

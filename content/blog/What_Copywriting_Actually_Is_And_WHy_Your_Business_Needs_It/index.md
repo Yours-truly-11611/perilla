@@ -9,7 +9,9 @@ author = 'Alex'
 keywords = ['copywriting vs content writing', 'what is copywriting', 'business copywriting tips', 'website copy for small business', 'about page best practices', 'landing page tips']
 lastmod = '2026-01-26T02:26:51.461491Z'
 toc = true
-banner = 'img/banners/banner-4.jpg'
+image = '/images/backgrounds/shell-forge.jpg'
+heroImage = '/images/backgrounds/shell-forge.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

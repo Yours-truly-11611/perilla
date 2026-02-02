@@ -7,6 +7,9 @@ draft = true
 categories = []
 author = 'Alex'
 lastmod = '2026-01-04T04:08:29.274008Z'
+image = '/images/backgrounds/hunt.jpg'
+heroImage = '/images/backgrounds/hunt.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

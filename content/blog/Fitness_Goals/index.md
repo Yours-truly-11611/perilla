@@ -8,6 +8,9 @@ toc = true
 categories = []
 author = 'Alex'
 lastmod = '2025-12-18T03:11:16.877744Z'
+image = '/images/backgrounds/plein-air.jpg'
+heroImage = '/images/backgrounds/plein-air.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

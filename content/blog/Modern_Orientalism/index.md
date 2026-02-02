@@ -1,5 +1,5 @@
 +++
-title = 'Modern Orientalism: '
+title = 'Modern Orientalism'
 description = 'An essay about my experience and observations of the West gazing Eastward.'
 tags = ['opinion', 'essay']
 date = '2025-12-22T05:00:00.000Z'
@@ -7,6 +7,9 @@ draft = true
 categories = ['budding']
 author = 'Alex'
 lastmod = '2025-12-23T11:25:07.985948Z'
+image = '/images/backgrounds/folly.jpg'
+heroImage = '/images/backgrounds/folly.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

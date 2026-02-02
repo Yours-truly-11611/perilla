@@ -7,6 +7,9 @@ draft = false
 categories = []
 author = 'Alex'
 lastmod = '2025-12-03T20:13:01.545143Z'
+image = '/images/backgrounds/scheile-boat.jpg'
+heroImage = '/images/backgrounds/scheile-boat.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

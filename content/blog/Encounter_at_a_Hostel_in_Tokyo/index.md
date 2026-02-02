@@ -7,6 +7,9 @@ draft = false
 categories = []
 author = 'Alex'
 lastmod = '2025-12-03T19:28:32.893987Z'
+image = '/images/backgrounds/cloud-world.jpg'
+heroImage = '/images/backgrounds/cloud-world.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

@@ -8,6 +8,9 @@ categories = []
 series = ['Books of the Year']
 author = 'Alex'
 lastmod = '2026-01-25T03:26:12.429231Z'
+image = '/images/backgrounds/peaches.jpg'
+heroImage = '/images/backgrounds/peaches.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

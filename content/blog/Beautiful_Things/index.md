@@ -1,5 +1,5 @@
 +++
-title = ' Beautiful Things'
+title = 'Beautiful Things'
 description = 'A running list of things that I am grateful for or that have supported me in some way.'
 tags = ['list', 'memory']
 date = '2025-12-07T14:52:37.308696Z'
@@ -8,7 +8,9 @@ categories = []
 author = 'Alex'
 weight = -10
 lastmod = '2026-01-25T03:29:25.300074Z'
-banner = 'img/banners/banner-g.jpg'
+image = '/images/backgrounds/flower.jpg'
+heroImage = '/images/backgrounds/flower.jpg'
+heroTintColor = 'rgba(30, 20, 40, 0.55)'
 
 +++
 

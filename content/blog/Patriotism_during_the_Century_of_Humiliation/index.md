@@ -1,17 +1,15 @@
-+++
-title = 'Patriotism during the Century of Humiliation'
-description = 'What does it mean to love one’s country even when it looks REALLY ugly?'
-tags = ['opinion', 'sociology', 'Culture']
-date = '2025-12-30T16:36:00.945617Z'
-draft = true
-categories = []
-author = 'Alex'
-lastmod = '2026-01-04T04:08:29.274008Z'
-image = '/images/backgrounds/hunt.jpg'
-heroImage = '/images/backgrounds/hunt.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Patriotism during the Century of Humiliation"
+date: 2025-12-30T16:36:00.945617Z
+lastmod: 2026-01-04T04:08:29.274008Z
+draft: true
+image: /images/backgrounds/hunt.jpg
+heroImage: /images/backgrounds/hunt.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "What does it mean to love one's country even when it looks REALLY ugly?"
+categories: []
+tags: ["opinion", "sociology", "Culture"]
+---
 
 
 Right now, it is December 2025, in the midst of the second Trump administration. I live in Canada. Criticizing the USA and it’s inhabitants is as easy and as common as talking about the weather. Wearing any semblance of Stars and Stripes flags you as some kind of bigot.

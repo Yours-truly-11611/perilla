@@ -1,18 +1,14 @@
-+++
-title = '(Non) Violent Communication'
-description = ''
-tags = ['Culture']
-date = '2026-01-28T22:35:20.773540Z'
-draft = false
-categories = ['personal']
-author = 'Alex'
-lastmod = '2026-01-28T22:36:38.152358Z'
-toc = true
-image = '/images/backgrounds/tug-of-war.jpg'
-heroImage = '/images/backgrounds/tug-of-war.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "(Non) Violent Communication"
+date: 2026-01-28T22:35:20.773540Z
+lastmod: 2026-01-28T22:36:38.152358Z
+image: /images/backgrounds/tug-of-war.jpg
+heroImage: /images/backgrounds/tug-of-war.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+toc: true
+categories: ["personal"]
+tags: ["Culture"]
+---
 
 
 Someone was writing about nonviolent communication in the group I journal with, which got me thinking about the exact opposite- ultimate violence communication.

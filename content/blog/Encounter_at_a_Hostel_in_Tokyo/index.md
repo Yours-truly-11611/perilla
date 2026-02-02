@@ -1,17 +1,14 @@
-+++
-title = 'Encounter at a Hostel in Tokyo'
-description = 'Or, “How I met my Husband”'
-tags = ['travel', 'memory']
-date = '2025-12-03T18:51:45.089454Z'
-draft = false
-categories = []
-author = 'Alex'
-lastmod = '2025-12-03T19:28:32.893987Z'
-image = '/images/backgrounds/cloud-world.jpg'
-heroImage = '/images/backgrounds/cloud-world.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Encounter at a Hostel in Tokyo"
+date: 2025-12-03T18:51:45.089454Z
+lastmod: 2025-12-03T19:28:32.893987Z
+image: /images/backgrounds/cloud-world.jpg
+heroImage: /images/backgrounds/cloud-world.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: 'Or, "How I met my Husband"'
+categories: []
+tags: ["travel", "memory"]
+---
 
 
 **This is the story of how I met my husband.**

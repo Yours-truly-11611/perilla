@@ -1,17 +1,13 @@
-+++
-title = 'Memory of a Fellow Vagabond'
-description = ''
-tags = ['journal', 'travel', 'memory']
-date = '2025-12-01T05:00:00.000Z'
-draft = false
-categories = []
-author = 'Alex'
-lastmod = '2025-12-03T20:13:01.545143Z'
-image = '/images/backgrounds/scheile-boat.jpg'
-heroImage = '/images/backgrounds/scheile-boat.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Memory of a Fellow Vagabond"
+date: 2025-12-01T05:00:00.000Z
+lastmod: 2025-12-03T20:13:01.545143Z
+image: /images/backgrounds/scheile-boat.jpg
+heroImage: /images/backgrounds/scheile-boat.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+categories: []
+tags: ["journal", "travel", "memory"]
+---
 
 
 One of the most memorable encounters during my 2 year stint as a vagabond was another traveller at a hostel in Christchurch, New Zealand. A modern, clean place that had an indoor turf area and outdoor stainless steel fire pits. The kind of hostel that had “pods” rather than “bunks”. It smelted like an airport in there.

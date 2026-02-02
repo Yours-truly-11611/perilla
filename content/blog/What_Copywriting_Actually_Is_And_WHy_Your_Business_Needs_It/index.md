@@ -1,19 +1,16 @@
-+++
-title = 'What Copywriting Actually Is (And Why Your Business Needs It)'
-description = 'Are you a small business confused about copywriting? (It’s persuasive writing.) Learn the difference between copy, copyright, and content, and how to use copy to grow your business.'
-tags = ['copywriting', 'content strategy', 'SEO', 'small business tips']
-date = '2026-01-22T08:58:57.563896Z'
-draft = false
-categories = ['writing', 'marketing', 'business']
-author = 'Alex'
-keywords = ['copywriting vs content writing', 'what is copywriting', 'business copywriting tips', 'website copy for small business', 'about page best practices', 'landing page tips']
-lastmod = '2026-01-26T02:26:51.461491Z'
-toc = true
-image = '/images/backgrounds/shell-forge.jpg'
-heroImage = '/images/backgrounds/shell-forge.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "What Copywriting Actually Is (And Why Your Business Needs It)"
+date: 2026-01-22T08:58:57.563896Z
+lastmod: 2026-01-26T02:26:51.461491Z
+image: /images/backgrounds/shell-forge.jpg
+heroImage: /images/backgrounds/shell-forge.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "Are you a small business confused about copywriting? (It's persuasive writing.) Learn the difference between copy, copyright, and content, and how to use copy to grow your business."
+toc: true
+categories: ["writing", "marketing", "business"]
+tags: ["copywriting", "content strategy", "SEO", "small business tips"]
+keywords: ["copywriting vs content writing", "what is copywriting", "business copywriting tips", "website copy for small business", "about page best practices", "landing page tips"]
+---
 
 
 If you’ve ever Googled ‘copywriting’ and come away more confused, you’ve found the right article to help straighten things out. By the time you finish reading, you should know what copywriting is and whether or not you need it.

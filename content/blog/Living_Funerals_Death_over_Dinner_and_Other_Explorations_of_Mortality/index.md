@@ -1,18 +1,15 @@
-+++
-title = 'Let’s Host a Death Fest'
-description = 'Living Funerals, Death over Dinner, and Other Explorations of Mortality: My search for ways I can foster a healthy relationship with death in a community setting.'
-tags = ['death', 'friendship', 'entertaining']
-date = '2025-12-08T13:29:10.238066Z'
-draft = false
-toc = true
-categories = []
-author = 'Alex'
-lastmod = '2025-12-18T02:54:40.008905Z'
-image = '/images/backgrounds/blind-mans-bluff.jpg'
-heroImage = '/images/backgrounds/blind-mans-bluff.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Let's Host a Death Fest"
+date: 2025-12-08T13:29:10.238066Z
+lastmod: 2025-12-18T02:54:40.008905Z
+image: /images/backgrounds/blind-mans-bluff.jpg
+heroImage: /images/backgrounds/blind-mans-bluff.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "Living Funerals, Death over Dinner, and Other Explorations of Mortality: My search for ways I can foster a healthy relationship with death in a community setting."
+toc: true
+categories: []
+tags: ["death", "friendship", "entertaining"]
+---
 
 
 Let's put the "fun" in funeral, baby.

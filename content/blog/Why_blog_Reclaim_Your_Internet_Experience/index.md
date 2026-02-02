@@ -1,17 +1,15 @@
-+++
-title = 'Why do I blog?'
-description = 'To reclaim my internet experience!'
-tags = ['opinion']
-date = '2025-12-20T20:04:21.801092Z'
-draft = true
-categories = ['budding']
-author = 'Alex'
-lastmod = '2026-01-26T18:34:13.291942Z'
-image = '/images/backgrounds/windmill.jpg'
-heroImage = '/images/backgrounds/windmill.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Why do I blog?"
+date: 2025-12-20T20:04:21.801092Z
+lastmod: 2026-01-26T18:34:13.291942Z
+draft: true
+image: /images/backgrounds/windmill.jpg
+heroImage: /images/backgrounds/windmill.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "To reclaim my internet experience!"
+categories: ["budding"]
+tags: ["opinion"]
+---
 
 
 *Isn’t keeping a blog a bit… egocentric?*

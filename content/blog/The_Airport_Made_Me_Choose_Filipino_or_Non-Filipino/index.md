@@ -1,19 +1,15 @@
-+++
-title = 'The Airport Made Me Choose: Filipino or Non-Filipino?'
-description = 'A Filipino-American’s first trip to the Philippines: Why visiting my ancestral homeland felt less like a homecoming and more like meeting a stranger for the first time'
-tags = ['travel', 'memory', 'Culture']
-date = '2026-01-13T22:27:51.881328Z'
-draft = false
-categories = ['travel', 'personal']
-author = 'Alex'
-keywords = ['third culture kid', 'Filipino diaspora', 'Filipino American identity', 'visiting the Philippines for the first time', 'not speaking Tagalog in the Philippines', 'identity crisis', 'belonging and identity', 'Baguio', 'Philippines', 'Filipino culture']
-lastmod = '2026-01-25T03:23:47.178951Z'
-toc = false
-image = '/images/backgrounds/bathing.jpg'
-heroImage = '/images/backgrounds/bathing.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "The Airport Made Me Choose: Filipino or Non-Filipino?"
+date: 2026-01-13T22:27:51.881328Z
+lastmod: 2026-01-25T03:23:47.178951Z
+image: /images/backgrounds/bathing.jpg
+heroImage: /images/backgrounds/bathing.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "A Filipino-American's first trip to the Philippines: Why visiting my ancestral homeland felt less like a homecoming and more like meeting a stranger for the first time"
+categories: ["travel", "personal"]
+tags: ["travel", "memory", "Culture"]
+keywords: ["third culture kid", "Filipino diaspora", "Filipino American identity", "visiting the Philippines for the first time", "not speaking Tagalog in the Philippines", "identity crisis", "belonging and identity", "Baguio", "Philippines", "Filipino culture"]
+---
 
 
 I was 22 when I first visited the Philippines. The country where my father was born, and where all of my ancestors had lived before my grandparents moved to the New World, the Land of Opportunity— the United States.

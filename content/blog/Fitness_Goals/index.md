@@ -1,18 +1,15 @@
-+++
-title = 'Wellness Goals'
-description = 'Taking care of my mortal vessel.'
-tags = ['fitness', 'goals', 'Health']
-date = '2025-12-06T18:56:09.093289Z'
-draft = false
-toc = true
-categories = []
-author = 'Alex'
-lastmod = '2025-12-18T03:11:16.877744Z'
-image = '/images/backgrounds/plein-air.jpg'
-heroImage = '/images/backgrounds/plein-air.jpg'
-heroTintColor = 'rgba(30, 20, 40, 0.55)'
-
-+++
+---
+title: "Wellness Goals"
+date: 2025-12-06T18:56:09.093289Z
+lastmod: 2025-12-18T03:11:16.877744Z
+image: /images/backgrounds/plein-air.jpg
+heroImage: /images/backgrounds/plein-air.jpg
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+summary: "Taking care of my mortal vessel."
+toc: true
+categories: []
+tags: ["fitness", "goals", "Health"]
+---
 
 
 „Wellness“ encompasses the state of both my „metals“ and „physicals“.

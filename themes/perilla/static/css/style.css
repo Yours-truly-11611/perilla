@@ -532,7 +532,7 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   gap: var(--space-md);
 }
 .nav-overlay__link {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 5vw, 3rem);
   color: var(--color-overlay-text);
   letter-spacing: 0.14em;

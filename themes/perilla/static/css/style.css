@@ -542,16 +542,21 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   position: relative;
   transition: color 0.3s ease;
 }
-.nav-overlay__link:focus {
-  color: var(--color-overlay-text);
+.nav-overlay__link:hover,
+.nav-overlay__link:active {
+  color: var(--color-accent);
   text-decoration: none !important;
   outline: none;
 }
-.nav-overlay__link:hover {
+.nav-overlay__link:focus-visible {
   color: var(--color-accent);
+  text-decoration: none !important;
+  outline: none;
 }
-.nav-overlay__link:active {
-  color: var(--color-accent);
+.nav-overlay__link:focus:not(:focus-visible) {
+  color: var(--color-overlay-text);
+  text-decoration: none !important;
+  outline: none;
 }
 
 /* Staggered entrance animation for nav links */

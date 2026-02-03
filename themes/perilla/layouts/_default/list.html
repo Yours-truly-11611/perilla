@@ -82,7 +82,7 @@
     {{ else }}
     <div class="post-grid">
       {{ $bgsAll := readDir "static/images/backgrounds" }}
-      {{ range .Pages }}
+      {{ range where .Pages "Kind" "page" }}
         {{ $cardImage := .Params.heroImage | default .Params.image }}
         {{ if not $cardImage }}
           {{ $idx := mod (len .Title) (len $bgsAll) }}

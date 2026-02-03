@@ -54,13 +54,17 @@
     {{ if eq .RelPermalink "/blog/popular/" }}
     <div class="post-grid">
       {{ $blogPage := .Site.GetPage "/blog" }}
+      {{ $bgs := readDir "static/images/backgrounds" }}
       {{ range where $blogPage.Pages "Params.popular" true }}
+        {{ $cardImage := .Params.heroImage | default .Params.image }}
+        {{ if not $cardImage }}
+          {{ $idx := mod (len .Title) (len $bgs) }}
+          {{ $cardImage = printf "/images/backgrounds/%s" (index $bgs $idx).Name }}
+        {{ end }}
         <a href="{{ .Permalink }}" class="post-card" data-reveal>
-          {{ with .Params.image }}
-            <div class="post-card__image">
-              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
-            </div>
-          {{ end }}
+          <div class="post-card__image">
+            <img src="{{ $cardImage }}" alt="{{ $.Title }}" loading="lazy" />
+          </div>
           <div class="post-card__body">
             <time class="post-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
               {{ .Date.Format "January 2, 2006" }}
@@ -77,13 +81,17 @@
     </div>
     {{ else }}
     <div class="post-grid">
+      {{ $bgsAll := readDir "static/images/backgrounds" }}
       {{ range .Pages }}
+        {{ $cardImage := .Params.heroImage | default .Params.image }}
+        {{ if not $cardImage }}
+          {{ $idx := mod (len .Title) (len $bgsAll) }}
+          {{ $cardImage = printf "/images/backgrounds/%s" (index $bgsAll $idx).Name }}
+        {{ end }}
         <a href="{{ .Permalink }}" class="post-card" data-reveal>
-          {{ with .Params.image }}
-            <div class="post-card__image">
-              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
-            </div>
-          {{ end }}
+          <div class="post-card__image">
+            <img src="{{ $cardImage }}" alt="{{ $.Title }}" loading="lazy" />
+          </div>
           <div class="post-card__body">
             <time class="post-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
               {{ .Date.Format "January 2, 2006" }}

@@ -27,13 +27,17 @@
 <main id="page-content" class="site-content">
   <div class="container">
     <div class="post-grid">
+      {{ $bgs := readDir "static/images/backgrounds" }}
       {{ range .Pages }}
+        {{ $cardImage := .Params.heroImage | default .Params.image }}
+        {{ if not $cardImage }}
+          {{ $idx := mod (len .Title) (len $bgs) }}
+          {{ $cardImage = printf "/images/backgrounds/%s" (index $bgs $idx).Name }}
+        {{ end }}
         <a href="{{ .Permalink }}" class="post-card" data-reveal>
-          {{ with .Params.image }}
-            <div class="post-card__image">
-              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
-            </div>
-          {{ end }}
+          <div class="post-card__image">
+            <img src="{{ $cardImage }}" alt="{{ $.Title }}" loading="lazy" />
+          </div>
           <div class="post-card__body">
             <time class="post-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
               {{ .Date.Format "January 2, 2006" }}

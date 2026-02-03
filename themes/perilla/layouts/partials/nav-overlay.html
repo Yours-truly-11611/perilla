@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.classList.add('is-open');
     openers.forEach(btn => btn.setAttribute('aria-expanded', 'true'));
     document.body.classList.add('nav-is-open'); // prevent body scroll
+    // Blur any focused element so nav links don't get :focus styling
+    if (document.activeElement) document.activeElement.blur();
   }
   function close() {
     overlay.classList.remove('is-open');

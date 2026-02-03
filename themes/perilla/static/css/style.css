@@ -537,20 +537,25 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   color: var(--color-overlay-text);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: var(--space-sm) 0;
   position: relative;
   transition: color 0.3s ease;
 }
+.nav-overlay__link:hover,
+.nav-overlay__link:focus,
+.nav-overlay__link:active {
+  color: var(--color-overlay-text);
+  text-decoration: none !important;
+  outline: none;
+}
 @media (hover: hover) {
   .nav-overlay__link:hover {
     color: var(--color-accent);
-    text-decoration: none;
   }
 }
 .nav-overlay__link:active {
   color: var(--color-accent);
-  text-decoration: none;
 }
 
 /* Staggered entrance animation for nav links */

@@ -6,7 +6,6 @@ date: 2024-12-28T05:00:00.000Z
 draft: false
 categories:
 lastmod: 2026-02-02T13:09:01.426811Z
-image: /images/backgrounds/autumn.jpg
 heroImage: /images/backgrounds/autumn.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: Visiting the place my family came from didn't answer the questions I thought it would. It asked better ones.

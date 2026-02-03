@@ -3,7 +3,6 @@ title: "Patriotism during the Century of Humiliation"
 date: 2025-12-30T16:36:00.945617Z
 lastmod: 2026-01-04T04:08:29.274008Z
 draft: true
-image: /images/backgrounds/hunt.jpg
 heroImage: /images/backgrounds/hunt.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "What does it mean to love one's country even when it looks REALLY ugly?"

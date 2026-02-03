@@ -2,7 +2,6 @@
 title: "Introversion is Overrated"
 date: 2025-11-20T16:09:42.035549Z
 lastmod: 2025-11-20T16:10:31.725373Z
-image: /images/backgrounds/tea-things.jpg
 heroImage: /images/backgrounds/tea-things.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 categories: []

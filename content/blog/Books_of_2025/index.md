@@ -2,7 +2,6 @@
 title: "Books of 2025"
 date: 2025-12-27T13:44:34.285144Z
 lastmod: 2026-01-25T03:26:12.429231Z
-image: /images/backgrounds/peaches.jpg
 heroImage: /images/backgrounds/peaches.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Books I read in 2025 and some brief thoughts on each."

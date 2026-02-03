@@ -2,7 +2,6 @@
 title: "Let's Host a Death Fest"
 date: 2025-12-08T13:29:10.238066Z
 lastmod: 2025-12-18T02:54:40.008905Z
-image: /images/backgrounds/blind-mans-bluff.jpg
 heroImage: /images/backgrounds/blind-mans-bluff.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Living Funerals, Death over Dinner, and Other Explorations of Mortality: My search for ways I can foster a healthy relationship with death in a community setting."

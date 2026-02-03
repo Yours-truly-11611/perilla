@@ -2,7 +2,6 @@
 title: "The Airport Made Me Choose: Filipino or Non-Filipino?"
 date: 2026-01-13T22:27:51.881328Z
 lastmod: 2026-01-25T03:23:47.178951Z
-image: /images/backgrounds/bathing.jpg
 heroImage: /images/backgrounds/bathing.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "A Filipino-American's first trip to the Philippines: Why visiting my ancestral homeland felt less like a homecoming and more like meeting a stranger for the first time"

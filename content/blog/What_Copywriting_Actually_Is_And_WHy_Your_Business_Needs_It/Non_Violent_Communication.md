@@ -2,7 +2,6 @@
 title: "(Non) Violent Communication"
 date: 2026-01-28T22:35:20.773540Z
 lastmod: 2026-01-28T22:36:38.152358Z
-image: /images/backgrounds/tug-of-war.jpg
 heroImage: /images/backgrounds/tug-of-war.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 toc: true

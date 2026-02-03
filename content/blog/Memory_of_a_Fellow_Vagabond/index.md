@@ -2,7 +2,6 @@
 title: "Memory of a Fellow Vagabond"
 date: 2025-12-01T05:00:00.000Z
 lastmod: 2025-12-03T20:13:01.545143Z
-image: /images/backgrounds/scheile-boat.jpg
 heroImage: /images/backgrounds/scheile-boat.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 categories: []

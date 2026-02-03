@@ -2,7 +2,6 @@
 title: "Beautiful Things"
 date: 2025-12-07T14:52:37.308696Z
 lastmod: 2026-01-25T03:29:25.300074Z
-image: /images/backgrounds/flower.jpg
 heroImage: /images/backgrounds/flower.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "A running list of things that I am grateful for or that have supported me in some way."

@@ -2,7 +2,6 @@
 title: "What Copywriting Actually Is (And Why Your Business Needs It)"
 date: 2026-01-22T08:58:57.563896Z
 lastmod: 2026-01-26T02:26:51.461491Z
-image: /images/backgrounds/shell-forge.jpg
 heroImage: /images/backgrounds/shell-forge.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Are you a small business confused about copywriting? (It's persuasive writing.) Learn the difference between copy, copyright, and content, and how to use copy to grow your business."

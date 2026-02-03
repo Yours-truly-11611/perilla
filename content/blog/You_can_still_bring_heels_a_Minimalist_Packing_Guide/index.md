@@ -2,7 +2,6 @@
 title: "You Can Still Bring Heels: a Long-term Minimalist Packing Guide"
 date: 2026-01-02T20:48:31.642723Z
 lastmod: 2026-01-25T03:26:42.493583Z
-image: /images/backgrounds/wild-strawberries.jpg
 heroImage: /images/backgrounds/wild-strawberries.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "A one-bag packing guide unlike any other."

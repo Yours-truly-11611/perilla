@@ -2,7 +2,6 @@
 title: "Lessons from Long Term Solo Travel"
 date: 2025-12-04T05:00:00.000Z
 lastmod: 2026-01-25T16:07:41.123263Z
-image: /images/backgrounds/jungle-sun.jpg
 heroImage: /images/backgrounds/jungle-sun.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 categories: ["travel", "personal"]

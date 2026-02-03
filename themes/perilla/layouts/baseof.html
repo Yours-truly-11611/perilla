@@ -33,7 +33,7 @@
   <!-- Head extras partial (for Open Graph, schema, etc.) -->
   {{ partial "head-extras.html" . }}
 </head>
-<body class="{{ if or .IsHome .Params.heroImage }}has-hero{{ end }}{{ if .IsHome }} is-home{{ end }}">
+<body class="{{ if or .IsHome .Params.heroImage (eq .Section "blog") }}has-hero{{ end }}{{ if .IsHome }} is-home{{ end }}">
   <!-- Top bar with logo, search & hamburger -->
   <div class="topbar">
     {{ if not .IsHome }}

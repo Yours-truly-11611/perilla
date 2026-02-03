@@ -1,10 +1,18 @@
 {{ define "main" }}
-{{ if .Params.heroImage }}
+{{/* Auto-assign a deterministic background if no heroImage is set */}}
+{{ $backgrounds := readDir "static/images/backgrounds" }}
+{{ $heroImage := .Params.heroImage }}
+{{ if not $heroImage }}
+  {{ $index := mod (len .Title) (len $backgrounds) }}
+  {{ $heroImage = printf "/images/backgrounds/%s" (index $backgrounds $index).Name }}
+{{ end }}
+{{ $heroTintColor := .Params.heroTintColor | default "rgba(30, 20, 40, 0.55)" }}
+{{ if $heroImage }}
   {{ if .Params.heroFull }}
   <section class="hero" aria-label="{{ .Title }} hero">
     <div class="hero__bg"
-         style="background-image: url('{{ .Params.heroImage | relURL }}');
-                background-color: {{ .Params.heroTintColor | default "rgba(30,20,40,0.55)" }};">
+         style="background-image: url('{{ $heroImage | relURL }}');
+                background-color: {{ $heroTintColor }};">
     </div>
     <div class="hero__content">
       <h1 class="hero__title">{{ .Title }}</h1>
@@ -27,14 +35,14 @@
       {{ end }}
     </div>
     <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
-      <img src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+      <img src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox__backdrop"></div>
     <div class="lightbox__content">
-      <img class="lightbox__img" src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+      <img class="lightbox__img" src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
       {{ with .Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
     </div>
   </div>
@@ -44,16 +52,6 @@
 <main id="page-content" class="site-content">
   <div class="container">
     <article class="article">
-      {{ if not .Params.heroImage }}
-      <header class="article__header">
-        <h1 class="article__title">{{ .Title }}</h1>
-        {{ if not .IsPage }}
-          <time class="article__date" datetime="{{ .Date.Format "2006-01-02" }}">
-            {{ .Date.Format "January 2, 2006" }}
-          </time>
-        {{ end }}
-      </header>
-      {{ end }}
 
       <div class="article__body">
         {{ .Content }}

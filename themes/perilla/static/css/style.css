@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Maragsa';
+  src: url('/fonts/maragsa-display.woff2') format('woff2'),
+       url('/fonts/maragsa-display.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================================
    PERILLA THEME — style.css
    
@@ -32,7 +41,7 @@
   --color-link-hover:  var(--color-accent-hover);
 
   /* Typography */
-  --font-display: 'Georgia', 'Times New Roman', serif;  /* swap for Kame if self-hosted */
+  --font-display: 'Maragsa', 'Georgia', 'Times New Roman', serif;
   --font-body:    'PT Sans', 'Helvetica Neue', Arial, sans-serif;
 
   /* Spacing */

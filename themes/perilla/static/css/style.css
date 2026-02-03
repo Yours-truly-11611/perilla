@@ -408,10 +408,6 @@ p {
    6. HAMBURGER BUTTON
    ============================================================ */
 .hamburger {
-  position: fixed;
-  top: var(--space-md);
-  right: var(--space-lg);
-  z-index: 100;
   width: 44px;
   height: 44px;
   display: flex;
@@ -420,6 +416,10 @@ p {
   justify-content: center;
   gap: 5px;
   pointer-events: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 /* Lock scrolling and hide hamburger on the home page */
 body.is-home {
@@ -699,16 +699,21 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-sm) var(--space-lg);
   pointer-events: none;
 }
 body:not(.is-home) .topbar {
   pointer-events: auto;
-  height: calc(var(--space-md) + 44px + var(--space-sm));
   background: rgba(58, 28, 58, 0.55);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   backdrop-filter: blur(12px) saturate(140%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  pointer-events: auto;
 }
 .topbar__logo,
 .topbar__spacer {
@@ -777,10 +782,6 @@ body:not(.is-home) .topbar {
 
 /* Topbar search button — sits to the left of the hamburger */
 .topbar__search-btn {
-  position: fixed;
-  top: var(--space-md);
-  right: calc(var(--space-lg) + 48px);
-  z-index: 100;
   width: 44px;
   height: 44px;
   display: flex;

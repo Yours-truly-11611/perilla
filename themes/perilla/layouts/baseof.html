@@ -34,7 +34,7 @@
   {{ partial "head-extras.html" . }}
 </head>
 <body class="{{ if or .IsHome .Params.heroImage }}has-hero{{ end }}{{ if .IsHome }} is-home{{ end }}">
-  <!-- Top bar with logo + hamburger -->
+  <!-- Top bar with logo, search & hamburger -->
   <div class="topbar">
     {{ if not .IsHome }}
       <a href="/" class="topbar__logo" aria-label="Home">
@@ -45,17 +45,24 @@
     {{ else }}
       <span class="topbar__spacer"></span>
     {{ end }}
-    {{ if not .IsHome }}
-    <a href="/search/" class="topbar__search-btn" aria-label="Search">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"/>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
-    </a>
-    {{ end }}
+    <div class="topbar__right">
+      {{ if not .IsHome }}
+      <a href="/search/" class="topbar__search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </a>
+      {{ end }}
+      <button class="hamburger" aria-controls="nav-overlay" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
   </div>
 
-  {{/* Nav overlay — rendered on every page; hamburger hidden on home via CSS */}}
+  {{/* Nav overlay — rendered on every page */}}
   {{ partial "nav-overlay.html" . }}
 
   <!-- Page content block -->

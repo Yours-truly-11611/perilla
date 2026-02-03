@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
 
   <!-- Theme stylesheet -->
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ now.Unix }}" />
 
   <!-- Custom stylesheet hook (place static/css/custom.css in your site to override) -->
   {{ with resources.Get "css/custom.css" }}

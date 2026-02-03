@@ -288,7 +288,7 @@ p {
   .hero-split__title-block {
     width: 50%;
     aspect-ratio: auto;
-    padding: var(--space-xl) var(--space-lg);
+    padding: calc(var(--space-xl) + 44px) var(--space-lg) var(--space-xl);
     align-items: flex-start;
     text-align: left;
   }

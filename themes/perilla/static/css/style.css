@@ -542,17 +542,13 @@ body.nav-is-open .hamburger__line:nth-child(3) {
   position: relative;
   transition: color 0.3s ease;
 }
-.nav-overlay__link:hover,
-.nav-overlay__link:focus,
-.nav-overlay__link:active {
+.nav-overlay__link:focus {
   color: var(--color-overlay-text);
   text-decoration: none !important;
   outline: none;
 }
-@media (hover: hover) {
-  .nav-overlay__link:hover {
-    color: var(--color-accent);
-  }
+.nav-overlay__link:hover {
+  color: var(--color-accent);
 }
 .nav-overlay__link:active {
   color: var(--color-accent);

@@ -1131,38 +1131,57 @@ body.has-hero:not(.scrolled) .topbar__search-btn {
    SERVICE CARDS
    ============================================================ */
 .service-cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  margin: var(--space-xl) 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+@media (min-width: 640px) {
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .service-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  border-radius: 8px;
-  overflow: hidden;
+  display: block;
   text-decoration: none;
-  color: var(--color-text);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   text-decoration: none;
 }
-.service-card__body {
-  padding: var(--space-md);
+.service-card__image {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.service-card__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 20, 40, 0.7) 0%, rgba(30, 20, 40, 0.1) 50%, transparent 100%);
+  transition: background 0.3s ease;
+}
+.service-card:hover .service-card__image::before {
+  background: linear-gradient(to top, rgba(30, 20, 40, 0.85) 0%, rgba(30, 20, 40, 0.3) 60%, rgba(30, 20, 40, 0.1) 100%);
+}
+.service-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .service-card__title {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  margin-bottom: var(--space-xs);
-  color: var(--color-text);
-}
-.service-card__summary {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin: 0;
 }

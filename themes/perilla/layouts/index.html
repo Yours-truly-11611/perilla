@@ -15,10 +15,10 @@
       <p class="hero__subtitle">{{ . }}</p>
     {{ end }}
 
-    <!-- Menu toggle button -->
-    <button class="hero__menu-btn" aria-controls="nav-overlay" aria-expanded="false" aria-label="Open navigation menu">
+    <!-- Services link -->
+    <a href="/services/" class="hero__menu-btn">
       {{ .Site.Params.menuButtonLabel | default "Explore" }}
-    </button>
+    </a>
   </div>
 </section>
 

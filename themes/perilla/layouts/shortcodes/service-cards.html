@@ -1,6 +1,6 @@
-{{ $services := .Page.CurrentSection.Pages }}
+{{ $servicesSection := .Site.GetPage "/services" }}
 <div class="service-cards">
-  {{ range $services }}
+  {{ range $servicesSection.Pages }}
     <a href="{{ .Permalink }}" class="service-card">
       <h3 class="service-card__title">{{ .Title }}</h3>
       {{ with .Params.summary }}

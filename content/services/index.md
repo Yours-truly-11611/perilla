@@ -11,24 +11,7 @@ heroSubtitle: "Writing & illustration for brands and businesses"
 
 I help brands and businesses tell their stories through thoughtful copywriting, content strategy, and original illustration.
 
-### Copywriting
-
-- **Website copy** — Homepage, about page, service pages, landing pages
-- **Blog posts & articles** — SEO-optimized content that sounds like a human wrote it
-- **Email sequences** — Nurture campaigns, newsletters, launches
-- **Brand voice development** — Finding the words that sound like *you*
-
-### Content Strategy
-
-- **Content audits** — What's working, what's not, what's missing
-- **Editorial calendars** — A plan you can actually follow
-- **SEO strategy** — Keywords, structure, and sustainable organic growth
-
-### Illustration
-
-- **Watercolor illustration** — For websites, products, and print
-- **Custom artwork** — Portraits, landscapes, botanical work
-- **Brand assets** — Icons, patterns, and visual elements
+{{< service-cards >}}
 
 ## My Approach
 

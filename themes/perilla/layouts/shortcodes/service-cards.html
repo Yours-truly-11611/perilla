@@ -1,0 +1,21 @@
+{{ $services := .Page.CurrentSection.Pages }}
+<div class="service-cards">
+  {{ range $services }}
+    {{ $title := .Title }}
+    {{ $heroImage := .Params.heroImage }}
+    {{ $summary := .Params.summary }}
+    <a href="{{ .Permalink }}" class="service-card">
+      {{ with $heroImage }}
+        <div class="service-card__image">
+          <img src="{{ . | relURL }}" alt="{{ $title }}" loading="lazy" />
+        </div>
+      {{ end }}
+      <div class="service-card__body">
+        <h3 class="service-card__title">{{ $title }}</h3>
+        {{ with $summary }}
+          <p class="service-card__summary">{{ . }}</p>
+        {{ end }}
+      </div>
+    </a>
+  {{ end }}
+</div>

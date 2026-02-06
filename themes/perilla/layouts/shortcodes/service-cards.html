@@ -1,18 +1,11 @@
 {{ $services := .Page.CurrentSection.Pages }}
-{{ $bgs := readDir "static/images/backgrounds" }}
 <div class="service-cards">
   {{ range $services }}
-    {{ $heroImage := .Params.heroImage }}
-    {{ if not $heroImage }}
-      {{ $idx := mod (len .Title) (len $bgs) }}
-      {{ $heroImage = printf "/images/backgrounds/%s" (index $bgs $idx).Name }}
-    {{ end }}
     <a href="{{ .Permalink }}" class="service-card">
-      <div class="service-card__image" style="background-image: url('{{ $heroImage | relURL }}');">
-        <div class="service-card__overlay">
-          <h3 class="service-card__title">{{ .Title }}</h3>
-        </div>
-      </div>
+      <h3 class="service-card__title">{{ .Title }}</h3>
+      {{ with .Params.summary }}
+        <p class="service-card__summary">{{ . }}</p>
+      {{ end }}
     </a>
   {{ end }}
 </div>

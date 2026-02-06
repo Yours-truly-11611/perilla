@@ -3,7 +3,7 @@ title: "Illustration"
 date: 2025-01-15
 heroImage: "images/backgrounds/flower.jpg"
 heroTintColor: "rgba(30, 20, 40, 0.55)"
-summary: "Watercolor illustration, custom artwork, and brand assets"
+summary: "Hand-painted watercolor artwork for brands and personal commissions"
 ---
 
 ## Art with intention

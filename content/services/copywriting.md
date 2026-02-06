@@ -3,7 +3,7 @@ title: "Copywriting"
 date: 2025-01-15
 heroImage: "images/backgrounds/morning-hopper.jpg"
 heroTintColor: "rgba(30, 20, 40, 0.55)"
-summary: "Website copy, blog posts, emails, and brand voice development"
+summary: "Clear, compelling copy for websites, blogs, emails, and more"
 ---
 
 ## Words that work

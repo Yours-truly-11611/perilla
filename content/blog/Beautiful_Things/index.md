@@ -5,7 +5,7 @@ lastmod: 2026-01-25T03:29:25.300074Z
 heroImage: /images/backgrounds/flower.jpg
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "A running list of things that I am grateful for or that have supported me in some way."
-weight: -10
+popular: true
 categories: []
 tags: ["list", "memory"]
 ---

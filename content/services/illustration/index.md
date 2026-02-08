@@ -1,9 +1,10 @@
 ---
-title: "Illustration"
+title: "Social media"
 date: 2025-01-15
 heroImage: "images/backgrounds/flower.jpg"
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Hand-painted watercolor artwork for brands and personal commissions"
+draft: true
 ---
 
 ## Art with intention
@@ -11,6 +12,8 @@ summary: "Hand-painted watercolor artwork for brands and personal commissions"
 I create watercolor illustrations for brands, publications, and personal commissions. Each piece is painted by hand, then digitized for flexible use across web and print.
 
 ## What I offer
+- Graphic reels and carousels | $40 per post
+- Batched social media captions | $150 for 30 instagram posts
 
 ### Watercolor Illustration
 Original artwork for websites, products, editorial, and print. Botanicals, landscapes, portraits, and abstract work.

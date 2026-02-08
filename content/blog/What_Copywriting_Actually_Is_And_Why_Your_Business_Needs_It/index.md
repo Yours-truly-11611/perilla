@@ -9,6 +9,7 @@ toc: true
 categories: ["writing", "marketing", "business"]
 tags: ["copywriting", "content strategy", "SEO", "small business tips"]
 keywords: ["copywriting vs content writing", "what is copywriting", "business copywriting tips", "website copy for small business", "about page best practices", "landing page tips"]
+popular: true
 ---
 
 

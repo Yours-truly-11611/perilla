@@ -7,7 +7,7 @@ heroTintColor: "rgba(30, 20, 40, 0.55)"
 heroSubtitle: "Writing & illustration for brands and businesses"
 ---
 
-## My *Services*
+## My Services
 
 {{< service-cards >}}
 

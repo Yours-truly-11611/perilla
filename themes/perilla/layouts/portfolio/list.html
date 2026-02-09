@@ -72,7 +72,7 @@
     <div class="post-grid">
       {{ range .Pages }}
         <a href="{{ .Permalink }}" class="post-card is-visible">
-          {{ with .Params.image }}
+          {{ with .Params.heroImage }}
             <div class="post-card__image">
               <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
             </div>

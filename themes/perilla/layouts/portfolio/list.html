@@ -71,10 +71,11 @@
   <div class="container">
     <div class="post-grid">
       {{ range .Pages }}
+        {{ $alt := .Params.heroImageAlt | default .Title }}
         <a href="{{ .Permalink }}" class="post-card is-visible">
           {{ with .Params.heroImage }}
             <div class="post-card__image">
-              <img src="{{ . }}" alt="{{ .Params.heroImageAlt | default .Title }}" loading="lazy" />
+              <img src="{{ . }}" alt="{{ $alt }}" loading="lazy" />
             </div>
           {{ end }}
           <div class="post-card__body">

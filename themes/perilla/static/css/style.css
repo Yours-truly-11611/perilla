@@ -281,8 +281,8 @@ p {
   display: inline-block;
   margin-top: var(--space-md);
   padding: 0.75em 1.5em;
-  background-color: var(--color-terracotta);
-  color: var(--color-cream);
+  background-color: var(--color-accent);
+  color: var(--color-bg);
   font-family: var(--font-display);
   font-size: 1rem;
   text-decoration: none;
@@ -290,8 +290,17 @@ p {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .hero-split__cta:hover {
-  background-color: var(--color-terracotta-dark, #b85a3a);
+  background-color: var(--color-accent-hover);
   transform: translateY(-2px);
+}
+.hero-split--no-image {
+  justify-content: center;
+}
+.hero-split--no-image .hero-split__title-block {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  align-items: center;
 }
 .hero-split__image {
   width: 100%;

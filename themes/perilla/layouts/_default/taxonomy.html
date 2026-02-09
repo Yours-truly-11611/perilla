@@ -10,14 +10,14 @@
     {{ end }}
   </div>
   <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
-    <img src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
+    <img src="{{ $heroImage | relURL }}" alt="{{ .Params.heroImageAlt | default .Title }}" />
   </div>
 </section>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <div class="lightbox__backdrop"></div>
   <div class="lightbox__content">
-    <img class="lightbox__img" src="{{ $heroImage | relURL }}" alt="{{ .Title }}" />
+    <img class="lightbox__img" src="{{ $heroImage | relURL }}" alt="{{ .Params.heroImageAlt | default .Title }}" />
     {{ with .Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
   </div>
 </div>

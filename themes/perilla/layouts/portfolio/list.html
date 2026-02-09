@@ -27,14 +27,14 @@
       {{ end }}
     </div>
     <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
-      <img src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+      <img src="{{ .Params.heroImage | relURL }}" alt="{{ .Params.heroImageAlt | default .Title }}" />
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox__backdrop"></div>
     <div class="lightbox__content">
-      <img class="lightbox__img" src="{{ .Params.heroImage | relURL }}" alt="{{ .Title }}" />
+      <img class="lightbox__img" src="{{ .Params.heroImage | relURL }}" alt="{{ .Params.heroImageAlt | default .Title }}" />
       {{ with .Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
     </div>
   </div>
@@ -74,7 +74,7 @@
         <a href="{{ .Permalink }}" class="post-card is-visible">
           {{ with .Params.heroImage }}
             <div class="post-card__image">
-              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
+              <img src="{{ . }}" alt="{{ .Params.heroImageAlt | default .Title }}" loading="lazy" />
             </div>
           {{ end }}
           <div class="post-card__body">

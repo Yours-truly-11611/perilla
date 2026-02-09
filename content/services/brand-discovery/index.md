@@ -4,6 +4,7 @@ date: 2025-01-15
 heroImage: "images/backgrounds/tea-things.jpg"
 heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Uncover your brand's voice, values, and story through guided discovery sessions"
+draft: true
 ---
 
 ## Find your voice

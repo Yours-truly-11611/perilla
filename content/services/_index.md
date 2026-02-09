@@ -7,8 +7,6 @@ heroTagline: "Based in Thunder Bay, serving creative entrepreneurs and small bra
 heroCTA: "Tell me about your project!"
 heroCTALink: "/contact/"
 ---
-I write website copy, blog content, and brand messaging for creative entrepreneurs, lifestyle brands, and small businesses who need strategic storytelling (and not corporate speak).
-
 ## Strategic Copywriting for Creatives Who Want to Sound Like Themselves
 
 **Get website copy, blog content, and brand messaging that:**

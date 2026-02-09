@@ -1,13 +1,24 @@
 ---
 title: "Find Your Voice. Tell Your Story."
 date: 2025-01-15
-heroImage: "images/backgrounds/shell-forge.jpg"
-heroFull: true
+heroImage: "/images/backgrounds/shell-forge.jpg"
+heroFull: false
 heroTintColor: "rgba(30, 20, 40, 0.55)"
-heroSubtitle: "**You're not a corporation. Your words shouldn't sound like one.**"
+heroSubtitle: "You're not a corporation. Your words shouldn't sound like one."
+heroCTA: "Tell me about your project!"
+heroCTALink: "/contact/"
 ---
-
 I write website copy, blog content, and brand messaging for creative entrepreneurs, lifestyle brands, and small businesses who need strategic storytelling—not corporate speak.
+
+## Strategic Copywriting for Creatives Who Want to Sound Like Themselves
+
+**Get website copy, blog content, and brand messaging that:**
+- Captures your authentic voice (not corporate speak)
+- Connects with your ideal clients
+- Converts without feeling salesy
+- Works for creative businesses, not enterprises
+
+Based in Thunder Bay, serving creative entrepreneurs and small brands globally.
 
 ## My Services
 

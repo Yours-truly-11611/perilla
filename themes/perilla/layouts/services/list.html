@@ -27,6 +27,9 @@
     {{ with .Params.heroSubtitle }}
       <p class="hero-split__subtitle">{{ . }}</p>
     {{ end }}
+    {{ with .Params.heroCTA }}
+      <a href="{{ $.Params.heroCTALink | default "/contact/" }}" class="hero-split__cta">{{ . }}</a>
+    {{ end }}
   </div>
   <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
     <img src="{{ $heroImage | relURL }}" alt="{{ .Params.heroImageAlt | default .Title }}" />

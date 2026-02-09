@@ -277,6 +277,22 @@ p {
   text-transform: uppercase;
   margin-bottom: 0;
 }
+.hero-split__cta {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 0.75em 1.5em;
+  background-color: var(--color-terracotta);
+  color: var(--color-cream);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.hero-split__cta:hover {
+  background-color: var(--color-terracotta-dark, #b85a3a);
+  transform: translateY(-2px);
+}
 .hero-split__image {
   width: 100%;
   aspect-ratio: 1 / 1;

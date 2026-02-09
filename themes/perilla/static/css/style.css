@@ -203,8 +203,24 @@ p {
   background: none;
   color: inherit;
   padding: 0;
+}
 
-
+/* CTA Button — reusable in content */
+.cta-button {
+  display: inline-block;
+  padding: 0.875em 2em;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.cta-button:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  color: var(--color-bg);
 }
 
 

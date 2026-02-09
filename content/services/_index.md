@@ -53,4 +53,4 @@ I'm especially drawn to projects in travel, lifestyle, wellness, and creative bu
 
 ## Ready to work together?
 
-[Get in touch →](/contact/)
+<a href="/contact/" class="cta-button">Get in touch →</a>

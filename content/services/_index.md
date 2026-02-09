@@ -1,9 +1,9 @@
 ---
 title: "Find Your Voice. Tell Your Story."
 date: 2025-01-15
-heroFull: false
-heroTintColor: "rgba(30, 20, 40, 0.55)"
-heroSubtitle: "You're not a corporation. Your words shouldn't sound like one."
+heroLogo: "/images/logo-placeholder.svg"
+heroDescription: "I write website copy, blog content, and brand messaging for creative entrepreneurs, lifestyle brands, and small businesses who need strategic storytelling—not corporate speak."
+heroTagline: "Based in Thunder Bay, serving creative entrepreneurs and small brands globally."
 heroCTA: "Tell me about your project!"
 heroCTALink: "/contact/"
 ---

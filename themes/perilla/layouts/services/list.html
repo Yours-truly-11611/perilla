@@ -1,53 +1,24 @@
 {{ define "main" }}
-{{ $heroImage := .Params.heroImage | default "images/backgrounds/cloud-world.jpg" }}
-{{ $heroTint := .Params.heroTintColor | default "rgba(30, 20, 40, 0.55)" }}
 
-{{ if .Params.heroFull }}
-<section class="hero" aria-label="{{ .Title }} hero">
-  <div class="hero__bg"
-       style="background-image: url('{{ $heroImage | relURL }}');
-              background-color: {{ $heroTint }};">
-  </div>
-  <div class="hero__content">
-    <h1 class="hero__title">{{ .Title }}</h1>
-    {{ with .Params.heroSubtitle }}
-      <p class="hero__subtitle">{{ . }}</p>
-    {{ end }}
-  </div>
-  <a href="#page-content" class="hero__scroll-hint" aria-label="Scroll to content">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </a>
-</section>
-{{ else }}
-<section class="hero-split {{ if not .Params.heroImage }}hero-split--no-image{{ end }}" aria-label="{{ .Title }} hero">
-  <div class="hero-split__title-block">
-    <h1 class="hero-split__title">{{ .Title }}</h1>
-    {{ with .Params.heroSubtitle }}
-      <p class="hero-split__subtitle">{{ . }}</p>
-    {{ end }}
-    {{ with .Params.heroCTA }}
-      <a href="{{ $.Params.heroCTALink | default "/contact/" }}" class="hero-split__cta">{{ . }}</a>
-    {{ end }}
-  </div>
-  {{ with .Params.heroImage }}
-  <div class="hero-split__image" role="button" tabindex="0" aria-label="View full image">
-    <img src="{{ . | relURL }}" alt="{{ $.Params.heroImageAlt | default $.Title }}" />
-  </div>
+<section class="services-hero">
+  {{ with .Params.heroLogo }}
+  <img src="{{ . | relURL }}" alt="" class="services-hero__logo" />
+  {{ end }}
+
+  <h1 class="services-hero__title">{{ .Title }}</h1>
+
+  {{ with .Params.heroDescription }}
+  <p class="services-hero__description">{{ . }}</p>
+  {{ end }}
+
+  {{ with .Params.heroTagline }}
+  <p class="services-hero__tagline">{{ . }}</p>
+  {{ end }}
+
+  {{ with .Params.heroCTA }}
+  <a href="{{ $.Params.heroCTALink | default "/contact/" }}" class="services-hero__cta">{{ . }}</a>
   {{ end }}
 </section>
-
-{{ with .Params.heroImage }}
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox__backdrop"></div>
-  <div class="lightbox__content">
-    <img class="lightbox__img" src="{{ . | relURL }}" alt="{{ $.Params.heroImageAlt | default $.Title }}" />
-    {{ with $.Params.heroImageDesc }}<p class="lightbox__caption">{{ . }}</p>{{ end }}
-  </div>
-</div>
-{{ end }}
-{{ end }}
 
 <main id="page-content" class="site-content">
   <div class="container">
@@ -58,30 +29,4 @@
     </article>
   </div>
 </main>
-
-<script>
-(function () {
-  var trigger = document.querySelector('.hero-split__image');
-  var lightbox = document.getElementById('lightbox');
-  if (!trigger || !lightbox) return;
-
-  function open() {
-    lightbox.classList.add('is-active');
-    lightbox.setAttribute('aria-hidden', 'false');
-  }
-  function close() {
-    lightbox.classList.remove('is-active');
-    lightbox.setAttribute('aria-hidden', 'true');
-  }
-
-  trigger.addEventListener('click', open);
-  trigger.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-  });
-  lightbox.querySelector('.lightbox__backdrop').addEventListener('click', close);
-  lightbox.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') close();
-  });
-})();
-</script>
 {{ end }}

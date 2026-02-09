@@ -1,7 +1,10 @@
 ---
-title: "My New Post"
+title: "IronBend Custom Fabrication"
 date: 2026-02-08T19:33:10-05:00
-draft: true
+heroImage: "images/backgrounds/shell-forge.jpg"
+heroTintColor: "rgba(30, 20, 40, 0.55)"
+heroSubtitle: "Copy for a web hero section"
+draft: false
 ---
 
 # SPEC WORK

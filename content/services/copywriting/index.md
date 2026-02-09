@@ -6,7 +6,7 @@ heroTintColor: "rgba(30, 20, 40, 0.55)"
 summary: "Clear, compelling copy for websites, blogs, emails, and more"
 ---
 
-## Copywriting tat sounds like you
+## Copywriting that sounds like you
 
 ### Hand over the blank page paralysis — I'll write it for you
 
@@ -25,11 +25,12 @@ This is for you if:
 I can write:
 
 - Website copy (homepage, about, services, contact) | $200 per page
-- Email sequences (welcome, launch, nurture, newsletters) 
+- Hero banners (Headline, subheadline, CTA) | $100 each
+- Email sequences (welcome, launch, nurture, newsletters) | $100 per email
 - Blog posts & articles | $100 each
-- Product descriptions | $5 each
-- Social media content (batched captions) | $150 for 30 instagram posts
-- Service guides and one-pagers
+- Product descriptions | $0.25 per word (since description length can vary widely)
+- Instagram carousel | $75 each (writing only), $100 if including design
+- LinkedIn post | $50 each
 
 ## My approach
 

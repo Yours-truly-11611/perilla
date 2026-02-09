@@ -345,8 +345,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
-  padding: var(--space-xl) var(--space-lg);
+  padding: calc(var(--space-xl) + 60px) var(--space-lg) var(--space-lg);
   background-color: var(--color-bg);
   color: var(--color-text);
 }

@@ -328,6 +328,7 @@ p {
   line-height: 1.1;
   margin: 0 0 var(--space-lg);
   max-width: 800px;
+  color: var(--color-overlay-text);
 }
 .services-hero__description {
   font-family: var(--font-body);

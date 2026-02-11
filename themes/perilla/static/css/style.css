@@ -554,14 +554,9 @@ body.is-home .hamburger {
   display: block;
   width: 24px;
   height: 1.5px;
-  background-color: var(--color-text);
+  background-color: var(--color-overlay-text);
   transition: background-color 0.2s ease, transform 0.3s ease, opacity 0.3s ease;
   border-radius: 1px;
-}
-
-/* On homepage hero (before scrolling past it), lines are white */
-body.has-hero:not(.scrolled) .hamburger__line {
-  background-color: rgba(255,255,255,0.85);
 }
 
 /* Animate to × when overlay is open */
@@ -857,13 +852,13 @@ body:not(.is-home) .topbar__title {
   height: 28px;
 }
 .topbar__logo {
-  color: var(--color-accent);
+  color: var(--color-overlay-text);
   text-decoration: none;
   transition: color 0.2s ease, transform 0.3s ease;
   display: block;
 }
 .topbar__logo:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
   transform: scale(1.12);
   text-decoration: none;
 }
@@ -923,12 +918,9 @@ body:not(.is-home) .topbar__title {
   align-items: center;
   justify-content: center;
   pointer-events: auto;
-  color: var(--color-text);
+  color: var(--color-overlay-text);
   transition: color 0.2s ease;
   text-decoration: none;
-}
-body.has-hero:not(.scrolled) .topbar__search-btn {
-  color: rgba(255,255,255,0.85);
 }
 .topbar__search-btn:hover {
   color: var(--color-accent);

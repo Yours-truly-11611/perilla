@@ -2,7 +2,8 @@
 title: "Find Your Voice. Tell Your Story."
 date: 2025-01-15
 heroLogo: "/images/logo-placeholder.svg"
-heroDescription: "I write website copy, blog content, and brand messaging for creative entrepreneurs, lifestyle brands, and small businesses who need strategic storytelling—not corporate speak."
+heroDescription: "Your business has a voice. I help you use it where it matters.
+Copywriting and content strategy for creatives, small businesses, and community projects. No jargon. No templates. Just clear, honest writing that sounds like you, works like marketing, and costs what a real person can actually pay."
 heroTagline: "Based in Thunder Bay, serving creative entrepreneurs and small brands globally."
 heroCTA: "Tell me about your project!"
 heroCTALink: "/contact/"
@@ -37,6 +38,18 @@ I can write:
 - Product descriptions | $0.25 per word (since description length can vary widely)
 - Instagram carousel | $75 each (writing only), $100 if including design
 - LinkedIn post | $50 each
+
+---
+
+## Here's how it works:
+
+1. Discovery call. Free, 30 minutes. You tell me about your business. I listen more than I talk.
+
+2. I write. You get drafts that sound like you, structured to do the work of marketing without losing your voice.
+
+3. We refine together. Revisions until it feels right. Not until I say it's done. Until you do.
+
+[Book a Free Discovery Call](/contact)
 
 ---
 

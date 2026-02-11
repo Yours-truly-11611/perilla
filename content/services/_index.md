@@ -45,11 +45,17 @@ I can write:
 
 1. Discovery call. Free, 30 minutes. You tell me about your business. I listen more than I talk.
 
-2. I write. You get drafts that sound like you, structured to do the work of marketing without losing your voice.
+2. I send a scope and a quote. Plain language. Clear pricing. No mystery line items.
 
-3. We refine together. Revisions until it feels right. Not until I say it's done. Until you do.
+3. I write. You get drafts that sound like you, structured to do the work of marketing without losing your voice.
 
-[Book a Free Discovery Call](/contact)
+4. We refine together. Revisions until it feels right. Not until I say it's done. Until you do.
+
+5. You launch. I stick around if you need me. I don't if you don't.
+
+The whole process is built to be as simple and un-stressful as hiring someone to do a thing should be.
+
+[Let's see if we're a good fit.](/contact)
 
 ---
 

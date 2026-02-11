@@ -115,9 +115,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
-h2 { font-size: clamp(1.4rem, 3vw, 1.85rem); }
-h3 { font-size: clamp(1.15rem, 2.2vw, 1.4rem); }
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 1.8rem); }
 
 p {
   margin-bottom: var(--space-md);
@@ -203,7 +203,7 @@ p {
   background-color: var(--color-accent);
   color: var(--color-bg);
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-decoration: none;
   border-radius: var(--radius);
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -222,7 +222,7 @@ p {
 }
 .page-header__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 400;
   margin: 0 0 var(--space-sm);
   color: var(--color-overlay-text);
@@ -288,7 +288,7 @@ p {
 }
 .hero-split__title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 400;
   color: var(--color-overlay-text);
   line-height: 1.15;
@@ -310,7 +310,7 @@ p {
   background-color: var(--color-accent);
   color: var(--color-bg);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -347,7 +347,7 @@ p {
 }
 .services-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 var(--space-lg);
@@ -375,7 +375,7 @@ p {
   background-color: var(--color-accent);
   color: var(--color-bg);
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-decoration: none;
   border-radius: var(--radius);
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -462,7 +462,7 @@ p {
 /* Site title */
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-size: clamp(3.5rem, 10vw, 7rem);
   font-weight: 400;
   color: #fff;
   letter-spacing: 0.02em;
@@ -623,7 +623,7 @@ body.nav-is-open .hamburger__line:nth-child(3) {
 }
 .nav-overlay__site-title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: var(--color-overlay-text);
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -643,7 +643,7 @@ body.nav-is-open .hamburger__line:nth-child(3) {
 }
 .nav-overlay__link {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 12vw, 3rem);
+  font-size: clamp(3.5rem, 14vw, 4rem);
   color: var(--color-overlay-text);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -830,7 +830,7 @@ body:not(.is-home) .topbar {
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--color-overlay-text);
   text-decoration: none;
   pointer-events: auto;
@@ -1282,7 +1282,7 @@ body.has-hero:not(.scrolled) .topbar__search-btn {
 }
 .service-card__title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
   color: #fff;
   letter-spacing: 0.03em;
   margin: 0 0 var(--space-sm) 0;

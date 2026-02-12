@@ -15,7 +15,7 @@ If calls aren't your thing, fill out the intake form below. I'll get back to you
 
 I'm currently available for freelance copywriting and content strategy projects. If you have something in mind — or just want to see if we'd be a good fit — say hello.
 
-
+{{</* contact-form */>}}
 
 **Upwork:** [Alexandria — Copywriter & Content Strategist](https://www.upwork.com)
 

@@ -53,6 +53,24 @@
   <div class="container">
     <article class="article">
 
+      {{ if .Lastmod }}
+      <p class="article__lastmod">Last edited: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time></p>
+      {{ end }}
+
+      {{ if .Params.toc }}
+      <div class="toc-wrapper">
+        <button class="toc-toggle" aria-expanded="false" aria-controls="toc-content">
+          <span class="toc-toggle__text">Table of Contents</span>
+          <svg class="toc-toggle__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <nav id="toc-content" class="toc" aria-label="Table of contents">
+          {{ .TableOfContents }}
+        </nav>
+      </div>
+      {{ end }}
+
       <div class="article__body">
         {{ .Content }}
       </div>
@@ -64,6 +82,20 @@
 </main>
 
 <script>
+// TOC Toggle
+(function () {
+  var toggle = document.querySelector('.toc-toggle');
+  var toc = document.getElementById('toc-content');
+  if (!toggle || !toc) return;
+
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    toc.classList.toggle('is-open');
+  });
+})();
+
+// Lightbox
 (function () {
   var trigger = document.querySelector('.hero-split__image');
   var lightbox = document.getElementById('lightbox');

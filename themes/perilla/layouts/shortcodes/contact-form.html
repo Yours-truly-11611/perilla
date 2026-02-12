@@ -1,5 +1,6 @@
 <form class="contact-form" action="https://formspree.io/f/xgoloyvv" method="POST">
   <input type="hidden" name="_next" value="{{ "/thank-you/" | absURL }}" />
+
   <div class="contact-form__field">
     <label for="name" class="contact-form__label">Name</label>
     <input type="text" id="name" name="name" class="contact-form__input" required />
@@ -11,8 +12,92 @@
   </div>
 
   <div class="contact-form__field">
-    <label for="message" class="contact-form__label">Message</label>
-    <textarea id="message" name="message" class="contact-form__textarea" rows="6" required></textarea>
+    <label for="website" class="contact-form__label">Website URL</label>
+    <input type="text" id="website" name="website" class="contact-form__input" placeholder="https:// or 'I don't have one yet'" />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-method" class="contact-form__label">Preferred Contact Method</label>
+    <select id="contact-method" name="contact_method" class="contact-form__input" required>
+      <option value="" disabled selected>Select one...</option>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="video">Video call</option>
+    </select>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="about-you" class="contact-form__label">What do you do and who do you serve?</label>
+    <textarea id="about-you" name="about_you" class="contact-form__textarea" rows="3"></textarea>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="how-found" class="contact-form__label">What brought you here?</label>
+    <input type="text" id="how-found" name="how_found" class="contact-form__input" />
+  </div>
+
+  <div class="contact-form__field">
+    <label class="contact-form__label">What service are you interested in?</label>
+    <div class="contact-form__checkboxes">
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="web_copy" /> Web copy
+      </label>
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="social_media" /> Social media posts
+      </label>
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="linkedin" /> LinkedIn posts
+      </label>
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="micro_copy" /> Micro copy
+      </label>
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="blog_posts" /> Blog posts
+      </label>
+      <label class="contact-form__checkbox-label">
+        <input type="checkbox" name="services" value="not_sure" /> Not sure yet
+      </label>
+    </div>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="current-situation" class="contact-form__label">Current situation (what's been going on lately?)</label>
+    <textarea id="current-situation" name="current_situation" class="contact-form__textarea" rows="4"></textarea>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="goals" class="contact-form__label">Goals (what does success look like for you 6 months from now?)</label>
+    <textarea id="goals" name="goals" class="contact-form__textarea" rows="4"></textarea>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="budget" class="contact-form__label">Budget range</label>
+    <select id="budget" name="budget" class="contact-form__input">
+      <option value="" disabled selected>Select one...</option>
+      <option value="under_500">Under $500</option>
+      <option value="500_1000">$500 - $1,000</option>
+      <option value="1000_2500">$1,000 - $2,500</option>
+      <option value="2500_5000">$2,500 - $5,000</option>
+      <option value="5000_plus">$5,000+</option>
+      <option value="not_sure">Not sure yet</option>
+    </select>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="timeline" class="contact-form__label">Timeline</label>
+    <select id="timeline" name="timeline" class="contact-form__input">
+      <option value="" disabled selected>Select one...</option>
+      <option value="asap">ASAP</option>
+      <option value="1_2_weeks">1-2 weeks</option>
+      <option value="1_month">Within a month</option>
+      <option value="2_3_months">2-3 months</option>
+      <option value="flexible">Flexible</option>
+    </select>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="anything-else" class="contact-form__label">Anything else?</label>
+    <textarea id="anything-else" name="anything_else" class="contact-form__textarea" rows="3"></textarea>
   </div>
 
   <button type="submit" class="contact-form__submit cta-button">Send Message</button>

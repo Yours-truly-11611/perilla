@@ -17,6 +17,8 @@ I'm currently available for freelance copywriting and content strategy projects.
 
 {{< contact-form >}}
 
+---
+
 **Upwork:** [Alexandria — Copywriter & Content Strategist](https://www.upwork.com)
 
 ---

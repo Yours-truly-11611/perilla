@@ -275,7 +275,7 @@ p {
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   text-decoration: none;
   border-radius: var(--radius);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .cta-button:hover {
   background-color: var(--color-bg);
@@ -383,11 +383,13 @@ p {
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .hero-split__cta:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-bg);
+  color: var(--color-accent);
   transform: translateY(-2px);
+  box-shadow: inset 0 0 0 2px var(--color-accent);
 }
 .hero-split--no-image {
   justify-content: center;
@@ -448,7 +450,7 @@ p {
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   text-decoration: none;
   border-radius: var(--radius);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .services-hero__cta:hover {
   background-color: var(--color-bg);
@@ -1398,12 +1400,13 @@ body:not(.is-home) .topbar__title {
   background-color: var(--color-accent);
   padding: var(--space-lg);
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .service-card:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-bg);
   transform: translateY(-2px);
   text-decoration: none;
+  box-shadow: inset 0 0 0 2px var(--color-accent);
 }
 .service-card__title {
   font-family: var(--font-display);
@@ -1411,12 +1414,20 @@ body:not(.is-home) .topbar__title {
   color: #fff;
   letter-spacing: 0.03em;
   margin: 0 0 var(--space-sm) 0;
+  transition: color 0.2s ease;
+}
+.service-card:hover .service-card__title {
+  color: var(--color-accent);
 }
 .service-card__summary {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin: 0;
+  transition: color 0.2s ease;
+}
+.service-card:hover .service-card__summary {
+  color: var(--color-text);
 }
 
 /* ============================================================

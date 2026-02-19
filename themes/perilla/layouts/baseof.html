@@ -32,9 +32,11 @@
   {{ partial "head-extras.html" . }}
 </head>
 <body class="{{ if or .IsHome .Params.heroImage (eq .Section "blog") }}has-hero{{ end }}{{ if .IsHome }} is-home{{ end }}">
-  <!-- Top bar with title, search & hamburger -->
+  <!-- Top bar with logo, search & hamburger -->
   <div class="topbar">
-    <a href="/" class="topbar__title">Three Legged Crow Studio</a>
+    <a href="/" class="topbar__logo" aria-label="Three Legged Crow Studio - Home">
+      <img src="/images/Crow-logo-cream.png" alt="Three Legged Crow Studio" />
+    </a>
     <div class="topbar__right">
       {{ if not .IsHome }}
       <a href="/search/" class="topbar__search-btn" aria-label="Search">

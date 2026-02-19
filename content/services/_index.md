@@ -1,7 +1,7 @@
 ---
 title: "Find Your Voice. Tell Your Story."
 date: 2025-01-15
-heroLogo: "/images/logo-placeholder.svg"
+heroLogo: "/images/Crow-logo-grey.png"
 heroDescription: "Your business has a voice. I help you use it where it matters.
 Copywriting and content strategy for creatives, small businesses, and community projects. No jargon. No templates. Just clear, honest writing that sounds like you, works like marketing, and costs what a real person can actually pay."
 heroTagline: "Based in Thunder Bay, serving creative entrepreneurs and small brands globally."

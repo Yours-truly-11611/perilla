@@ -690,16 +690,17 @@ body.nav-is-open .hamburger__line:nth-child(3) {
 .nav-overlay__header {
   display: none;
 }
-.nav-overlay__site-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  color: var(--color-overlay-text);
-  letter-spacing: 0.04em;
-  text-decoration: none;
+.nav-overlay__logo {
+  display: block;
+  transition: transform 0.2s ease;
 }
-.nav-overlay__site-title:hover {
-  color: var(--color-accent);
-  text-decoration: none;
+.nav-overlay__logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+.nav-overlay__logo:hover {
+  transform: scale(1.05);
 }
 
 /* Nav links */
@@ -902,34 +903,29 @@ body:not(.is-home) .topbar {
   backdrop-filter: blur(12px) saturate(140%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-.topbar__title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
+.topbar__logo {
+  display: block;
   margin-right: auto;
-  color: var(--color-overlay-text);
-  text-decoration: none;
   pointer-events: auto;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-body:not(.is-home) .topbar__title {
+.topbar__logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+body:not(.is-home) .topbar__logo {
   opacity: 1;
 }
-.topbar__title:hover {
-  color: var(--color-accent);
-  text-decoration: none;
+.topbar__logo:hover {
+  transform: scale(1.05);
 }
 .topbar__right {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
   pointer-events: auto;
-}
-.topbar__logo,
-.topbar__spacer {
-  pointer-events: auto;
-  width: 28px;
-  height: 28px;
 }
 .topbar__logo {
   color: var(--color-overlay-text);

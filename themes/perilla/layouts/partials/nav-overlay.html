@@ -15,9 +15,11 @@
     </svg>
   </button>
 
-  <!-- Site title inside overlay (mirrors hero) -->
+  <!-- Logo inside overlay -->
   <div class="nav-overlay__header">
-    <a href="{{ "/" | relURL }}" class="nav-overlay__site-title">{{ .Site.Params.heroTitle | default .Site.Title }}</a>
+    <a href="{{ "/" | relURL }}" class="nav-overlay__logo" aria-label="Three Legged Crow Studio - Home">
+      <img src="/images/Crow-logo-cream.png" alt="Three Legged Crow Studio" />
+    </a>
   </div>
 
   <!-- Menu links — populated from your site's [[menu.main]] in config.toml -->

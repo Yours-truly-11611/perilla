@@ -91,11 +91,7 @@ content:
           - { name: num,     label: Number,  type: string }
           - { name: title,   label: Title,   type: string }
           - { name: tagline, label: Tagline, type: string }
-          - name: paragraphs
-            label: Paragraphs
-            type: list
-            fields:
-              - { name: value, label: Paragraph, type: string }
+          - { name: body,    label: Body,    type: rich-text }
           - name: faq
             label: FAQ
             type: list

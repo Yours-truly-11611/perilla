@@ -21,8 +21,8 @@
         <h2 class="svc-row__title">{{ .title }}</h2>
       </div>
       <div class="svc-row__body">
-        {{ range .paragraphs }}
-        <p class="svc-row__desc">{{ . }}</p>
+        {{ with .body }}
+        <div class="svc-row__desc">{{ . | markdownify }}</div>
         {{ end }}
         {{ with .deliverables }}
         <ul class="svc-row__deliverables">

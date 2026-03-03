@@ -1,0 +1,9 @@
+.about__ai-policy {
+  padding: var(--s-2xl) var(--px-page);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.svc-row__faq {
+  margin-top: var(--s-lg);
+  border-top: 1px solid var(--c-border);
+}

@@ -1,42 +1,46 @@
 ---
-title: "About"
-date: 2025-01-15
-heroImage: "images/backgrounds/wild-strawberries.jpg"
-heroFull: true
-heroTintColor: "rgba(30, 20, 40, 0.55)"
-heroSubtitle: "Writer, illustrator, and curious human"
+title: "Studio"
+layout: "about"
+description: "Studio — AI Policy"
+
+pageSubtitle: "Est. 2025 — Independent by choice."
+introHeading: "Design is how we<br>think, not just<br>what we make."
+introBody:
+  - "Vence is a small, independent design studio founded in 2014. We work across brand identity, digital design, motion, and strategy — usually in combination, always with intention."
+  - "We're based between London and Lisbon, and work with clients across Europe, North America, and East Asia. We're deliberately small: six permanent team members, a network of trusted collaborators, and a policy of never taking on more work than we can do well."
+  - "We founded the studio on a single conviction — that the best design comes from genuine understanding of what a client is trying to do and why. Everything else follows from that."
+
+howWeWork:
+  - num: "01"
+    title: "Research first"
+    text: "We don't open a sketchbook until we understand the problem. That means interviews, audits, competitor analysis, and a written strategic brief before any creative work begins."
+  - num: "02"
+    title: "Fewer clients, deeper work"
+    text: "We cap our active projects to ensure every client gets the attention the work deserves. We'd rather do four things well than eight things adequately."
+  - num: "03"
+    title: "Honest counsel"
+    text: "We tell clients what we think, including when we think they're wrong. We're not in the business of producing work we know could be better."
+  - num: "04"
+    title: "Long relationships"
+    text: "Most of our work comes from clients we've worked with before. We think of our best relationships as ongoing — a studio on retainer for the life of the brand, not a one-time vendor."
+  - num: "05"
+    title: "Craft, always"
+    text: "The quality of the work matters to us independent of whether anyone else notices. We hold ourselves to a standard that's internal, not external."
+  - num: "06"
+    title: "No unnecessary complexity"
+    text: "We resist the temptation to make things more complicated than they need to be. Simple, clear, precise — these are virtues, not limitations."
+
+whatWeValue:
+  - title: "Self Sufficiency"
+    text: "Relying on corporations is out and controlling your own online presence is in. No more being trapped by monthly fees, locked-in systems, or uncustomizable templates. All of our services are built with preserving your voice and your independence in mind. Whether we end up collaborating for years or we decide to part ways, you won't be stuck relying on my services or systems, and everything we made together will be easily transferrable to any platform you wish."
+  - title: "Hospitality"
+    text: "When you have someone over to your home, you want them to feel comfortable and at-ease. It should be the same for your website and content. Your online visitors will feel intuitively at home, and not left wondering where so-and-so link will take them or where they need to turn to find the page they're looking for."
+  - title: "Curiosity"
+    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto."
 ---
 
-## About the creative director
+We at Three Legged Crow Studio believe that the best way to reach your human audience is through human content.
 
-My name is Alexandria. I have a business degree, a nearly-finished digital marketing certification, and a deep conviction that good writing should be accessible to people doing interesting work.
+The main use cases for AI here at the studio include code checking, audience and SEO research, spell checking, and sugguestions on how to improve the flow of our content.
 
-I've studied the frameworks; I know what AIDA stands for and when PAS beats BAB. But the people I work with don't care about any of that. They care about whether the words on their website sound like something they'd actually say. That's the bar I write to.
-
-Years of nomadic living taught me that connection and hospitality matter more than most people admit. Whether someone lands on your website or knocks on your door, they should feel like they're in the right place. I bring that same instinct to every project.
-
-When I'm not working, I like to hike, sail, paint, read, and explore with my kid.
-
-## What I Believe
-
-**Good writing is good thinking made visible.** Your website, your emails, and your social posts are all windows into how you think about your work. When the words are clear and authentic, everything else gets easier.
-
-**Authenticity and professionalism aren't opposites.** You can be warm without being unprofessional. Direct without being harsh. Playful without being unserious.
-
-**Creative work deserves business infrastructure.** You're not "just" an artist or a creative. You're running a business! And businesses need solid foundations: clear positioning, professional presentation, systems that work. That's not selling out. That's sustainability.
-
-**Quality over quantity.** I take on a limited number of projects so I can give each one the attention it deserves. No assembly lines, no templates, no cutting corners.
-
-**Collaboration over dictation.** This is YOUR business, YOUR voice, YOUR vision. My job is to help you articulate it clearly, not to impose my own aesthetic or tell you what you "should" do.
-
-**Community over competition.** When local creatives thrive, we all benefit. I refer work I can't take. I introduce people who should know each other. I show up for other people's launches and workshops. Rising tide, all boats.
-
-## What I Offer
-
-I write for blogs, websites, and brands. My work tends toward the conversational-but-intelligent, accessible without being shallow. I pair strong prose with strategic thinking: SEO, content pillars, brand voice, the whole architecture of it.
-
-## Let's Work Together
-
-Whether you need help finding your brand voice, writing copy that doesn't make you cringe, or building a website you're actually proud to share? I'd love to hear about your project.
-
-[Let's get in touch→](/contact/)
+That being said, you have the final say on how much AI is used on your project. If you want no AI, you'll get no AI. If you want whole AI written articles, I'll do that for you too.

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main class="error-page">
+  <div class="error-page__content">
+    <h1 class="error-page__title">404</h1>
+    <p class="error-page__message">Oops, you're lost. What were you looking for?</p>
+    <div class="error-page__search">
+      <input type="text" class="error-page__input" id="errorSearchInput" placeholder="Search the site..." autocomplete="off" />
+    </div>
+    <a href="/" class="error-page__home">Back to Home</a>
+  </div>
+</main>
+
+<script>
+(function () {
+  var input = document.getElementById('errorSearchInput');
+  if (!input) return;
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      var q = input.value.trim();
+      if (q) window.location.href = '/search/?q=' + encodeURIComponent(q);
+    }
+  });
+})();
+</script>
+{{ end }}

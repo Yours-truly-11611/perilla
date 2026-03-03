@@ -1,0 +1,133 @@
+baseURL      = "http://localhost:1313/"
+languageCode = "en-US"
+title        = "Vence"
+theme        = "vence"
+
+[params]
+  description     = "A small, focused design studio working at the intersection of brand, digital, and motion."
+  heroTitle       = "Crafting brands\nthat endure."
+  heroSubtitle    = "Design Studio — Est. 2014"
+  heroVideo       = "video/hero.mp4"
+  heroImage       = "images/backgrounds/jungle-sun.jpg"
+  menuButtonLabel = "Our Work"
+  footerTagline   = "Built with intention."
+
+  # Homepage sections
+  missionStatement = "Design is not decoration. It is the clearest expression of what a company believes — and the sharpest tool it has for earning trust."
+  statement        = "Good design isn't a finish — it's a foundation. We build brands that give companies something to grow into."
+  studioImage      = "images/backgrounds/tug-of-war.jpg"
+  testimonialImage = "images/backgrounds/bathing.jpg"
+
+  [params.studio]
+    heading = "A studio built on craft."
+    body    = "We're a small, independent team of designers, strategists, and filmmakers. We believe the best brands are built slowly, with obsessive attention to the things most people never notice."
+    cta     = "About Us"
+    ctaURL  = "/about/"
+
+  [params.studioDirector]
+    name  = "Nick Bronzin"
+    role  = "Creative Director"
+    image = "images/backgrounds/flower.jpg"
+
+  [params.testimonial]
+    quote  = "Vence didn't just design our brand — they gave us a language. Every touchpoint now feels intentional, coherent, and unmistakably ours."
+    author = "Mara Osei"
+    role   = "CEO, Helios Group"
+
+  # Contact page
+  contactHeading  = "We'd love to hear about your project."
+  contactSub      = "Tell us what you're working on. We respond to every enquiry within two business days."
+  contactSubtitle = "Let's find out if we're a good fit."
+
+  [[params.contactDetails]]
+    label = "Email"
+    value = "hello@vence.studio"
+    href  = "mailto:hello@vence.studio"
+  [[params.contactDetails]]
+    label = "New Business"
+    value = "work@vence.studio"
+    href  = "mailto:work@vence.studio"
+  [[params.contactDetails]]
+    label = "London"
+    value = "+44 20 7946 0958"
+  [[params.contactDetails]]
+    label = "Based"
+    value = "London & Lisbon"
+
+  # Services page
+  servicesSubtitle = "What we do, and how we do it."
+  servicesIntro    = "We work across four interconnected disciplines. Most of our engagements draw on more than one — a brand identity that informs a website, a strategy that shapes a film."
+  ctaHeading       = "Ready to start?"
+  ctaSub           = "We're currently booking projects for Q3 2025. Get in touch to discuss your brief."
+  ctaLabel         = "Talk to Us"
+
+  [[params.services]]
+    num   = "01"
+    title = "Brand Identity"
+    paragraphs = [
+      "We build brand identities from first principles — starting with strategy and ending with a system comprehensive enough to live in the world without us.",
+      "Our identity work is always underpinned by research. We want to understand what you're actually trying to communicate, to whom, and why."
+    ]
+    deliverables = ["Naming", "Visual Identity", "Typography Systems", "Colour", "Iconography", "Brand Guidelines"]
+
+  [[params.services]]
+    num   = "02"
+    title = "Web & Digital"
+    paragraphs = [
+      "We design websites and digital experiences with the same care we bring to print. Attention to typography, pacing, and the feel of moving through content.",
+      "We work with development partners we trust for build, or hand off detailed specifications to in-house teams."
+    ]
+    deliverables = ["Art Direction", "Web Design", "Design Systems", "Campaign Sites", "UX Strategy"]
+
+  [[params.services]]
+    num   = "03"
+    title = "Motion & Film"
+    paragraphs = [
+      "We direct and produce brand films, documentary content, and motion identity systems. Our film work is characterised by restraint and a strong sense of visual rhythm.",
+      "Our motion identity work extends a brand's visual language into time-based media."
+    ]
+    deliverables = ["Brand Films", "Documentary Content", "Motion Identity", "Social Content", "Broadcast Packages"]
+
+  [[params.services]]
+    num   = "04"
+    title = "Strategy"
+    paragraphs = [
+      "Strategy is often where our most valuable work happens. We help organisations understand their positioning, clarify their messaging, and make decisions about how to present themselves.",
+      "We offer strategy as a standalone engagement or as the opening phase of a wider project."
+    ]
+    deliverables = ["Brand Positioning", "Audience Research", "Competitor Analysis", "Messaging Architecture", "Brand Voice & Tone"]
+
+[[menu.main]]
+  name   = "Work"
+  url    = "/work/"
+  weight = 1
+
+[[menu.main]]
+  name   = "Studio"
+  url    = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name   = "Services"
+  url    = "/services/"
+  weight = 3
+
+[[menu.main]]
+  name   = "Journal"
+  url    = "/journal/"
+  weight = 4
+
+[[menu.main]]
+  name   = "Contact"
+  url    = "/contact/"
+  weight = 5
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "JSON"]

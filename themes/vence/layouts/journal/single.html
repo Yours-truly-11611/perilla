@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main class="journal-article site-content">
+  <header class="journal-article__header">
+    {{ with .Params.category }}
+      <span class="journal-article__category">{{ . }}</span>
+    {{ end }}
+    <h1 class="journal-article__title">{{ .Title }}</h1>
+    <div class="journal-article__meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.readingTime }}<span>{{ . }} min read</span>{{ end }}
+    </div>
+  </header>
+
+  <div class="journal-article__body">
+    {{ .Content }}
+  </div>
+
+  <a href="/journal/" class="journal-article__back">&larr; Back to Journal</a>
+</main>
+{{ end }}

@@ -1,0 +1,54 @@
+{{ define "main" }}
+{{ $bgs := readDir "static/images/backgrounds" }}
+{{ $img := .Params.image | default (printf "images/backgrounds/%s" (index $bgs (mod (len .Title) (len $bgs))).Name) }}
+
+<article class="project">
+
+  <div class="project__hero">
+    <img src="{{ $img | relURL }}" alt="{{ .Title }}" />
+  </div>
+
+  <div class="project__body">
+    <div class="project__content">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+    <aside class="project__meta">
+      {{ with .Params.category }}
+      <div class="project__meta-item">
+        <span class="project__meta-label">Category</span>
+        <span class="project__meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.client }}
+      <div class="project__meta-item">
+        <span class="project__meta-label">Client</span>
+        <span class="project__meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.year }}
+      <div class="project__meta-item">
+        <span class="project__meta-label">Year</span>
+        <span class="project__meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.deliverables }}
+      <div class="project__meta-item">
+        <span class="project__meta-label">Deliverables</span>
+        <span class="project__meta-value">{{ delimit . ", " }}</span>
+      </div>
+      {{ end }}
+    </aside>
+  </div>
+
+  <nav class="project__nav" aria-label="Project navigation">
+    {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}">&larr; {{ .Title }}</a>
+    {{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}
+      <a href="{{ .Permalink }}">{{ .Title }} &rarr;</a>
+    {{ else }}<span></span>{{ end }}
+  </nav>
+
+</article>
+{{ end }}

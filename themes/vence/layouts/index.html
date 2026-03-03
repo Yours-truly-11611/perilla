@@ -1,0 +1,244 @@
+{{ define "main" }}
+
+{{ $heroVideo := .Site.Params.heroVideo }}
+{{ $heroImage := .Site.Params.heroImage | default "images/backgrounds/jungle-sun.jpg" }}
+
+<!-- ════════════════════════════════════════════════
+     HERO — full-screen video (falls back to image)
+     ════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+
+  {{ if $heroVideo }}
+    <video class="hero__video" autoplay muted loop playsinline preload="auto"
+           poster="{{ $heroImage | relURL }}">
+      <source src="{{ $heroVideo | relURL }}" type="video/mp4" />
+    </video>
+    <div class="hero__video-tint"></div>
+  {{ else }}
+    <div class="hero__bg" style="background-image: url('{{ $heroImage | relURL }}');"></div>
+  {{ end }}
+
+  <div class="hero__content">
+    <p class="hero__subtitle">{{ .Site.Params.heroSubtitle | default "Design Studio" }}</p>
+    <h1 class="hero__title">{{ .Site.Params.heroTitle | default .Site.Title }}</h1>
+    <a href="/work/" class="hero__menu-btn">{{ .Site.Params.menuButtonLabel | default "View Work" }}</a>
+  </div>
+
+  <a href="#main-content" class="hero__scroll-hint" aria-label="Scroll to content">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none"
+         stroke="currentColor" stroke-width="1.5"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </a>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     STUDIO SPLIT — text left, photo right
+     ════════════════════════════════════════════════ -->
+<section class="v-studio" id="main-content" aria-label="About the studio">
+  <div class="v-studio__text">
+    <h2 class="v-studio__heading">{{ (.Site.Params.studio).heading | default "A studio built on craft." }}</h2>
+    <p class="v-studio__body">{{ (.Site.Params.studio).body | default "We're a small, independent team of designers, strategists, and filmmakers. We believe the best brands are built slowly, with obsessive attention to the things most people never notice." }}</p>
+
+    {{ with .Site.Params.studioDirector }}
+    <div class="v-studio__avatar">
+      <div class="v-studio__avatar-img">
+        <img src="{{ (.image | default "images/backgrounds/flower.jpg") | relURL }}" alt="{{ .name }}" />
+      </div>
+      <div class="v-studio__avatar-text">
+        <strong>{{ .name }}</strong>
+        <span>{{ .role }}</span>
+      </div>
+    </div>
+    {{ end }}
+
+    <a href="{{ (.Site.Params.studio).ctaURL | default "/about/" }}" class="v-studio__cta">
+      {{ (.Site.Params.studio).cta | default "Learn More" }}
+    </a>
+  </div>
+  <div class="v-studio__image">
+    <img src="{{ (.Site.Params.studioImage | default "images/backgrounds/tug-of-war.jpg") | relURL }}" alt="Studio" />
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     MISSION — full-width centered paragraph
+     ════════════════════════════════════════════════ -->
+<section class="v-mission" aria-label="Mission statement">
+  <p class="v-mission__text">{{ .Site.Params.missionStatement | default "Design is not decoration. It is the clearest expression of what a company believes — and the sharpest tool it has for earning trust." }}</p>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SELECTED WORK — 2-up top + 1 full-width bottom
+     ════════════════════════════════════════════════ -->
+<section class="v-work" aria-label="Selected work">
+  <div class="v-work__header">
+    <h2 class="v-work__heading">Selected Work</h2>
+    <a href="/work/" class="v-work__all">All Projects &rarr;</a>
+  </div>
+
+  <div class="v-work__grid">
+    {{ $work  := where .Site.RegularPages "Section" "work" }}
+    {{ $items := $work | first 3 }}
+
+    {{ range $i, $page := $items }}
+    {{ $bgs := readDir "static/images/backgrounds" }}
+    {{ $img := $page.Params.image | default (printf "images/backgrounds/%s" (index $bgs (mod (len $page.Title) (len $bgs))).Name) }}
+    <a href="{{ $page.Permalink }}"
+       class="v-work-card{{ if eq $i 2 }} v-work-card--full{{ end }}"
+       data-reveal>
+      <div class="v-work-card__img">
+        <img src="{{ $img | relURL }}" alt="{{ $page.Title }}" loading="lazy" />
+      </div>
+      <div class="v-work-card__overlay">
+        <div class="v-work-card__meta">
+          <span class="v-work-card__tag">{{ $page.Params.category | default "Project" }}</span>
+          <h3 class="v-work-card__title">{{ $page.Title }}</h3>
+          <p class="v-work-card__desc">{{ $page.Description | default ($page.Summary | truncate 80) }}</p>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     PROCESS — numbered rows
+     ════════════════════════════════════════════════ -->
+<section class="v-process" aria-label="Our process">
+  <div class="v-process__inner">
+    <h2 class="v-process__heading">Process</h2>
+    <div class="v-process__list">
+
+      {{ range .Site.Params.process }}
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">{{ .num }}</span>
+          <span class="v-process-row__title">{{ .title }}</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>{{ .body }}</p>
+        </div>
+      </div>
+      {{ else }}
+
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">01</span>
+          <span class="v-process-row__title">Research</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>We start with rigorous discovery — interviews, audits, and competitor analysis — before a single sketch is made. The brief must be airtight before we move forward.</p>
+        </div>
+      </div>
+
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">02</span>
+          <span class="v-process-row__title">Strategy</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>Positioning, messaging, and visual direction are agreed before any design begins. This alignment saves time, prevents conflict, and produces better work.</p>
+        </div>
+      </div>
+
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">03</span>
+          <span class="v-process-row__title">Design</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>We present a focused set of directions — not a menu of options. We'll tell you which one we'd choose, and why. The work moves quickly once the thinking is clear.</p>
+        </div>
+      </div>
+
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     Q&A — collapsible accordion
+     ════════════════════════════════════════════════ -->
+<section class="v-qna" aria-label="Frequently asked questions">
+  <div class="v-qna__inner">
+    <h2 class="v-qna__heading">Q&amp;A</h2>
+    <div class="v-qna__list">
+
+      {{ range .Site.Params.faq }}
+      <details class="v-qna__item">
+        <summary class="v-qna__q">{{ .q }}</summary>
+        <div class="v-qna__a"><p>{{ .a }}</p></div>
+      </details>
+      {{ else }}
+
+      <details class="v-qna__item">
+        <summary class="v-qna__q">Who do you typically work with?</summary>
+        <div class="v-qna__a">
+          <p>Founders, creative directors, and marketing leads — at companies from early-stage startups to established organisations. What they share is high standards and a conviction that design is worth doing properly.</p>
+        </div>
+      </details>
+
+      <details class="v-qna__item">
+        <summary class="v-qna__q">What does your process look like?</summary>
+        <div class="v-qna__a">
+          <p>Every project begins with a written strategic brief. Creative work only starts once we have a clear foundation. We work in focused phases and present finished work — not ongoing works-in-progress.</p>
+        </div>
+      </details>
+
+      <details class="v-qna__item">
+        <summary class="v-qna__q">How long does a project take?</summary>
+        <div class="v-qna__a">
+          <p>Brand identity: 10–16 weeks. Web design: 8–12 weeks. Film projects vary by scope — typically 6–10 weeks from brief to delivery. We give you a specific timeline in our proposal, and we honour it.</p>
+        </div>
+      </details>
+
+      <details class="v-qna__item">
+        <summary class="v-qna__q">Do you handle everything in-house?</summary>
+        <div class="v-qna__a">
+          <p>Strategy, brand design, and art direction are all in-house. For development, film production, and photography we work with trusted collaborators we've known for years. We manage everything and are accountable for the full output.</p>
+        </div>
+      </details>
+
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     STATEMENT — large centered pull quote
+     ════════════════════════════════════════════════ -->
+<section class="v-statement" aria-label="Studio statement">
+  <div class="v-statement__inner">
+    <p class="v-statement__text">{{ .Site.Params.statement | default "Good design isn't a finish — it's a foundation. We build brands that give companies something to grow into." }}</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     TESTIMONIAL — full-width image with overlay text + CTA
+     ════════════════════════════════════════════════ -->
+<section class="v-testimonial" aria-label="Client testimonial">
+  <div class="v-testimonial__bg">
+    <img src="{{ (.Site.Params.testimonialImage | default "images/backgrounds/bathing.jpg") | relURL }}" alt="" loading="lazy" />
+    <div class="v-testimonial__tint"></div>
+  </div>
+  <div class="v-testimonial__content">
+    {{ with .Site.Params.testimonial }}
+    <blockquote class="v-testimonial__quote">{{ .quote }}</blockquote>
+    <cite class="v-testimonial__cite">{{ .author }}{{ with .role }}, <span>{{ . }}</span>{{ end }}</cite>
+    {{ end }}
+    <a href="/contact/" class="v-testimonial__cta">Start a Project</a>
+  </div>
+</section>
+
+
+{{ end }}

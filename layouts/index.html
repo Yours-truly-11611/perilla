@@ -1,0 +1,169 @@
+{{ define "main" }}
+
+{{ $heroVideo := .Params.heroVideo }}
+{{ $heroImage := .Params.heroImage | default "images/backgrounds/jungle-sun.jpg" }}
+
+<!-- ════════════════════════════════════════════════
+     HERO — full-screen video (falls back to image)
+     ════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+
+  {{ if $heroVideo }}
+    <video class="hero__video" autoplay muted loop playsinline preload="auto"
+           disablepictureinpicture controlsList="nofullscreen noremoteplayback"
+           poster="{{ $heroImage | relURL }}">
+      <source src="{{ $heroVideo | relURL }}" type="video/mp4" />
+    </video>
+    <div class="hero__video-tint"></div>
+  {{ else }}
+    <div class="hero__bg" style="background-image: url('{{ $heroImage | relURL }}');"></div>
+  {{ end }}
+
+  <div class="hero__content">
+    <p class="hero__subtitle">{{ .Params.heroSubtitle | default "Design Studio" }}</p>
+    <h1 class="hero__title">{{ .Params.heroTitle | default .Site.Title }}</h1>
+    <a href="/contact/" class="hero__menu-btn">{{ .Params.menuButtonLabel | default "Get in Touch" }}</a>
+  </div>
+
+  <a href="#main-content" class="hero__scroll-hint" aria-label="Scroll to content">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none"
+         stroke="currentColor" stroke-width="1.5"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </a>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     STUDIO SPLIT — text left, photo right
+     ════════════════════════════════════════════════ -->
+<section class="v-studio" id="main-content" aria-label="About the studio" data-reveal>
+  <div class="v-studio__text">
+    <h2 class="v-studio__heading">{{ (.Params.studio).heading | default "A studio built on craft." }}</h2>
+    <p class="v-studio__body">{{ (.Params.studio).body | default "We're a small, independent team of designers, strategists, and filmmakers. We believe the best brands are built slowly, with obsessive attention to the things most people never notice." }}</p>
+
+    <a href="{{ (.Params.studio).ctaURL | default "/about/" }}" class="v-studio__cta">
+      {{ (.Params.studio).cta | default "Learn More" }}
+    </a>
+  </div>
+  <div class="v-studio__image">
+    <img src="{{ (.Params.studioImage | default "images/backgrounds/tug-of-war.jpg") | relURL }}" alt="Studio" />
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SERVICES LIST — numbered rows with taglines
+     ════════════════════════════════════════════════ -->
+{{ with .Params.homeServices }}
+<section class="v-process" aria-label="Services overview" data-reveal>
+  <div class="v-process__inner">
+    <h2 class="v-process__heading">Services</h2>
+    <div class="v-process__list">
+      {{ range . }}
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">{{ .num }}</span>
+          <span class="v-process-row__title">{{ .title }}</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>{{ .tagline }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <a href="/services/" class="v-studio__cta">View All Services</a>
+  </div>
+</section>
+{{ end }}
+
+
+<!-- ════════════════════════════════════════════════
+     MISSION — full-width centered paragraph
+     ════════════════════════════════════════════════ -->
+<section class="v-mission" aria-label="Mission statement" data-reveal>
+  <p class="v-mission__text">{{ .Params.missionStatement | default "Design is not decoration. It is the clearest expression of what a company believes — and the sharpest tool it has for earning trust." }}</p>
+</section>
+
+
+{{/* Selected Work section hidden — re-enable when ready
+<section class="v-work" aria-label="Selected work">
+  ...
+</section>
+*/}}
+
+
+<!-- ════════════════════════════════════════════════
+     PROCESS — numbered rows
+     ════════════════════════════════════════════════ -->
+<section class="v-process" aria-label="Our process" data-reveal>
+  <div class="v-process__inner">
+    <h2 class="v-process__heading">Process</h2>
+    <div class="v-process__list">
+
+      {{ range .Params.process }}
+      <div class="v-process-row">
+        <div class="v-process-row__label">
+          <span class="v-process-row__num">{{ .num }}</span>
+          <span class="v-process-row__title">{{ .title }}</span>
+        </div>
+        <div class="v-process-row__body">
+          <p>{{ .body }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     Q&A — collapsible accordion
+     ════════════════════════════════════════════════ -->
+<section class="v-qna" aria-label="Frequently asked questions" data-reveal>
+  <div class="v-qna__inner">
+    <h2 class="v-qna__heading">Q&amp;A</h2>
+    <div class="v-qna__list">
+
+      {{ range .Params.faq }}
+      <details class="v-qna__item">
+        <summary class="v-qna__q">{{ .q }}</summary>
+        <div class="v-qna__a"><p>{{ .a }}</p></div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     STATEMENT — large centered pull quote
+     ════════════════════════════════════════════════ -->
+<section class="v-statement" aria-label="Studio statement" data-reveal>
+  <div class="v-statement__inner">
+    <p class="v-statement__text">{{ .Params.statement | default "Good design isn't a finish — it's a foundation. We build brands that give companies something to grow into." }}</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     TESTIMONIAL — full-width image with overlay text + CTA
+     ════════════════════════════════════════════════ -->
+<section class="v-testimonial" aria-label="Client testimonial" data-reveal>
+  <div class="v-testimonial__bg">
+    <img src="{{ (.Params.testimonialImage | default "images/backgrounds/bathing.jpg") | relURL }}" alt="" loading="lazy" />
+    <div class="v-testimonial__tint"></div>
+  </div>
+  <div class="v-testimonial__content">
+    {{ with .Params.testimonial }}
+    <blockquote class="v-testimonial__quote">{{ .quote }}</blockquote>
+    <cite class="v-testimonial__cite">{{ .author }}{{ with .role }}, <span>{{ . }}</span>{{ end }}</cite>
+    {{ end }}
+    <a href="/contact/" class="v-testimonial__cta">Start a Project</a>
+  </div>
+</section>
+
+
+{{ end }}

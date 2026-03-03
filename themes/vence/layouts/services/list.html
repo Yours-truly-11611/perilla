@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<section class="services-hero">
+  {{ with .Params.heroLogo }}
+  <img src="{{ . | relURL }}" alt="" class="services-hero__logo" />
+  {{ end }}
+
+  <h1 class="services-hero__title">{{ .Title }}</h1>
+
+  {{ with .Params.heroDescription }}
+  <p class="services-hero__description">{{ . }}</p>
+  {{ end }}
+
+  {{ with .Params.heroTagline }}
+  <p class="services-hero__tagline">{{ . }}</p>
+  {{ end }}
+
+  {{ with .Params.heroCTA }}
+  <a href="{{ $.Params.heroCTALink | default "/contact/" }}" class="services-hero__cta">{{ . }}</a>
+  {{ end }}
+</section>
+
+<main id="page-content" class="site-content">
+  <div class="container">
+    <article class="article">
+      <div class="article__body">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</main>
+{{ end }}

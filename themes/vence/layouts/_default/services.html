@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1 class="page-header__title">Services</h1>
+  <p class="page-header__subtitle">{{ .Site.Params.servicesSubtitle | default "What we do, and how we do it." }}</p>
+</div>
+
+<main class="services-page site-content">
+  <div class="services-page__intro">
+    {{ with .Site.Params.servicesIntro }}
+      <p>{{ . }}</p>
+    {{ else }}
+      <p>We work across four interconnected disciplines. Most of our engagements draw on more than one — a brand identity that informs a website, a strategy that shapes a film. We prefer projects where we can see the whole picture.</p>
+    {{ end }}
+  </div>
+
+  <div class="services-page__list">
+    {{ range .Site.Params.services }}
+    <div class="svc-row" data-reveal>
+      <div class="svc-row__label">
+        <span class="svc-row__num">{{ .num }}</span>
+        <h2 class="svc-row__title">{{ .title }}</h2>
+      </div>
+      <div class="svc-row__body">
+        {{ range .paragraphs }}
+        <p class="svc-row__desc">{{ . }}</p>
+        {{ end }}
+        {{ with .deliverables }}
+        <ul class="svc-row__deliverables">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </div>
+    </div>
+    {{ else }}
+    {{ .Content }}
+    {{ end }}
+  </div>
+</main>
+
+<section class="home-cta">
+  <div class="home-cta__inner">
+    <h2 class="home-cta__heading">{{ .Site.Params.ctaHeading | default "Ready to start?" }}</h2>
+    <p class="home-cta__sub">{{ .Site.Params.ctaSub | default "Get in touch to discuss your brief." }}</p>
+    <a href="/contact/" class="home-cta__btn">{{ .Site.Params.ctaLabel | default "Talk to Us" }}</a>
+  </div>
+</section>
+
+{{ end }}

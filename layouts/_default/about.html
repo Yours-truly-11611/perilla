@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1 class="page-header__title">Studio</h1>
+  <p class="page-header__subtitle">{{ .Params.pageSubtitle | default "Est. 2025 — Independent by choice." }}</p>
+</div>
+
+<article class="about">
+
+  <!-- Intro -->
+  <div class="about__intro">
+    <h2 class="about__intro-heading">{{ .Params.introHeading | default "Design is how we<br>think, not just<br>what we make." | safeHTML }}</h2>
+    <div class="about__intro-body">
+      {{ range .Params.introBody }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- How We Work -->
+  {{ with .Params.howWeWork }}
+  <div class="about__values">
+    <h2 class="about__values-heading">How We Work</h2>
+    <div class="about__values-grid">
+      {{ range . }}
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">{{ .num }}</span>
+        <h3 class="about__value-title">{{ .title }}</h3>
+        <p class="about__value-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- What We Value -->
+  {{ with .Params.whatWeValue }}
+  <div class="about__values">
+    <h2 class="about__values-heading">What We Value</h2>
+    <div class="about__values-grid">
+      {{ range . }}
+      <div class="about__value" data-reveal>
+        <h3 class="about__value-title">{{ .title }}</h3>
+        <p class="about__value-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- AI Policy -->
+  {{ with .Content }}
+  <div class="about__ai-policy">
+    <h2 class="about__values-heading">AI Policy</h2>
+    <div class="about__intro-body">
+      {{ . }}
+    </div>
+  </div>
+  {{ end }}
+
+</article>
+
+{{ end }}

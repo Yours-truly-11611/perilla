@@ -1,36 +1,25 @@
 baseURL      = "https://alexagain.com/"
 languageCode = "en-US"
 title        = "Alexandria"
-theme        = "perilla"
+theme        = "vence"
 
 [params]
-  # googleAnalytics = "G-XXXXXXXXXX"
-  description     = "Writing, design, and creative exploration."
-  heroTitle       = "Alexandria"
-  heroSubtitle    = "Writing & Design"
-  heroImage       = "images/backgrounds/jungle-sun.jpg"
-  heroTintColor   = "rgba(30, 20, 40, 0.55)"
-  menuButtonLabel = "Explore"
-  footerNote      = "Built with love, Hugo, & the Perilla theme."
+  description   = "A small, focused design studio working at the intersection of brand, digital, and motion."
+  footerTagline = "Built with intention."
 
 [[menu.main]]
-  name   = "About"
+  name   = "Studio"
   url    = "/about/"
-  weight = 1
-
-[[menu.main]]
-  name   = "Blog"
-  url    = "/blog/"
   weight = 2
-
-[[menu.main]]
-  name   = "Portfolio"
-  url    = "/portfolio/"
-  weight = 3
 
 [[menu.main]]
   name   = "Services"
   url    = "/services/"
+  weight = 3
+
+[[menu.main]]
+  name   = "Journal"
+  url    = "/journal/"
   weight = 4
 
 [[menu.main]]
@@ -39,8 +28,8 @@ theme        = "perilla"
   weight = 5
 
 [taxonomies]
-  category = "categories"
   tag      = "tags"
+  category = "categories"
 
 [markup.goldmark.renderer]
   unsafe = true

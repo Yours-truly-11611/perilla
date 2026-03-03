@@ -1,0 +1,57 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1 class="page-header__title">Contact</h1>
+  <p class="page-header__subtitle">{{ .Site.Params.contactSubtitle | default "Let's find out if we're a good fit." }}</p>
+</div>
+
+<main class="contact-page site-content">
+
+  <div class="contact-page__info">
+    <h2 class="contact-page__heading">{{ .Site.Params.contactHeading | default "We'd love to hear about your project." }}</h2>
+    <p class="contact-page__sub">{{ .Site.Params.contactSub | default "Tell us what you're working on. We respond to every enquiry within two business days." }}</p>
+
+    <div class="contact-page__details">
+      {{ range .Site.Params.contactDetails }}
+      <div class="contact-page__detail">
+        <span class="contact-page__detail-label">{{ .label }}</span>
+        <span class="contact-page__detail-value">
+          {{ if .href }}<a href="{{ .href }}">{{ .value }}</a>{{ else }}{{ .value }}{{ end }}
+        </span>
+      </div>
+      {{ else }}
+      <div class="contact-page__detail">
+        <span class="contact-page__detail-label">Email</span>
+        <span class="contact-page__detail-value"><a href="mailto:hello@example.com">hello@example.com</a></span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="contact-page__form">
+    {{ .Content }}
+    {{ if not .Content }}
+    <form class="contact-form" name="contact" method="POST" action="/thank-you/">
+      <div class="contact-form__field">
+        <label class="contact-form__label" for="name">Your name</label>
+        <input class="contact-form__input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+      </div>
+      <div class="contact-form__field">
+        <label class="contact-form__label" for="email">Email address</label>
+        <input class="contact-form__input" type="email" id="email" name="email" placeholder="jane@company.com" required />
+      </div>
+      <div class="contact-form__field">
+        <label class="contact-form__label" for="org">Organisation</label>
+        <input class="contact-form__input" type="text" id="org" name="org" placeholder="Company or project name" />
+      </div>
+      <div class="contact-form__field">
+        <label class="contact-form__label" for="message">Tell us about your project</label>
+        <textarea class="contact-form__textarea" id="message" name="message"
+                  placeholder="What are you trying to achieve? Any budget or timeline guidance is helpful." rows="6" required></textarea>
+      </div>
+      <button type="submit" class="cta-button contact-form__submit">Send Enquiry</button>
+    </form>
+    {{ end }}
+  </div>
+
+</main>
+{{ end }}

@@ -1,0 +1,77 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1 class="page-header__title">Studio</h1>
+  <p class="page-header__subtitle">Est. 2014 — Independent by choice.</p>
+</div>
+
+<article class="about">
+
+  <!-- Intro -->
+  <div class="about__intro">
+    <h2 class="about__intro-heading">Design is how we<br>think, not just<br>what we make.</h2>
+    <div class="about__intro-body">
+      {{ with .Content }}
+        {{ . }}
+      {{ else }}
+        <p>Vence is a small, independent design studio founded in 2014. We work across brand identity, digital design, motion, and strategy — usually in combination, always with intention.</p>
+        <p>We're based between London and Lisbon, and work with clients across Europe, North America, and East Asia. We're deliberately small: six permanent team members, a network of trusted collaborators, and a policy of never taking on more work than we can do well.</p>
+        <p>We founded the studio on a single conviction — that the best design comes from genuine understanding of what a client is trying to do and why. Everything else follows from that.</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Values -->
+  {{ with .Site.Params.values }}
+  <div class="about__values">
+    <h2 class="about__values-heading">How we work</h2>
+    <div class="about__values-grid">
+      {{ range . }}
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">{{ .num }}</span>
+        <h3 class="about__value-title">{{ .title }}</h3>
+        <p class="about__value-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ else }}
+  <div class="about__values">
+    <h2 class="about__values-heading">How we work</h2>
+    <div class="about__values-grid">
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">01</span>
+        <h3 class="about__value-title">Research first</h3>
+        <p class="about__value-text">We don't open a sketchbook until we understand the problem. That means interviews, audits, competitor analysis, and a written strategic brief before any creative work begins.</p>
+      </div>
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">02</span>
+        <h3 class="about__value-title">Fewer clients, deeper work</h3>
+        <p class="about__value-text">We cap our active projects to ensure every client gets the attention the work deserves. We'd rather do four things well than eight things adequately.</p>
+      </div>
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">03</span>
+        <h3 class="about__value-title">Honest counsel</h3>
+        <p class="about__value-text">We tell clients what we think, including when we think they're wrong. We're not in the business of producing work we know could be better.</p>
+      </div>
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">04</span>
+        <h3 class="about__value-title">Long relationships</h3>
+        <p class="about__value-text">Most of our work comes from clients we've worked with before. We think of our best relationships as ongoing — a studio on retainer for the life of the brand, not a one-time vendor.</p>
+      </div>
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">05</span>
+        <h3 class="about__value-title">Craft, always</h3>
+        <p class="about__value-text">The quality of the work matters to us independent of whether anyone else notices. We hold ourselves to a standard that's internal, not external.</p>
+      </div>
+      <div class="about__value" data-reveal>
+        <span class="about__value-num">06</span>
+        <h3 class="about__value-title">No unnecessary complexity</h3>
+        <p class="about__value-text">We resist the temptation to make things more complicated than they need to be. Simple, clear, precise — these are virtues, not limitations.</p>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+</article>
+
+{{ end }}

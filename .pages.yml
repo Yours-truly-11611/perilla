@@ -1,0 +1,121 @@
+media: static/images
+
+content:
+
+  # ── Single pages ──────────────────────────────────────────
+
+  - name: homepage
+    label: Home
+    type: file
+    path: content/_index.md
+    fields:
+      - { name: heroTitle,       label: "Hero Title",       type: string }
+      - { name: heroSubtitle,    label: "Hero Subtitle",    type: string }
+      - { name: heroVideo,       label: "Hero Video",       type: string }
+      - { name: heroImage,       label: "Hero Image",       type: image }
+      - { name: menuButtonLabel, label: "Hero Button",      type: string }
+      - name: studio
+        label: "Studio Section"
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: body,    label: Body,    type: string }
+          - { name: cta,     label: "Button Label", type: string }
+          - { name: ctaURL,  label: "Button URL",   type: string }
+      - { name: studioImage,       label: "Studio Image",       type: image }
+      - { name: missionStatement,  label: "Mission Statement",  type: string }
+      - name: homeServices
+        label: "Services (overview)"
+        type: list
+        fields:
+          - { name: num,     label: Number,  type: string }
+          - { name: title,   label: Title,   type: string }
+          - { name: tagline, label: Tagline, type: string }
+      - name: process
+        label: "Process"
+        type: list
+        fields:
+          - { name: num,   label: Number, type: string }
+          - { name: title, label: Title,  type: string }
+          - { name: body,  label: Body,   type: string }
+      - name: faq
+        label: "FAQ"
+        type: list
+        fields:
+          - { name: q, label: Question, type: string }
+          - { name: a, label: Answer,   type: string }
+      - { name: statement, label: "Statement", type: string }
+      - name: testimonial
+        label: "Testimonial"
+        type: object
+        fields:
+          - { name: quote,  label: Quote,  type: string }
+          - { name: author, label: Author, type: string }
+          - { name: role,   label: Role,   type: string }
+      - { name: testimonialImage, label: "Testimonial Image", type: image }
+
+  - name: studio
+    label: Studio
+    type: file
+    path: content/about/index.md
+    fields:
+      - { name: pageSubtitle, label: "Page Subtitle", type: string }
+      - { name: introHeading, label: "Intro Heading", type: string }
+      - name: body
+        label: "Intro Text"
+        type: rich-text
+      - { name: aiPolicy, label: "AI Policy", type: rich-text }
+      - name: howWeWork
+        label: "How We Work"
+        type: list
+        fields:
+          - { name: num,   label: Number, type: string }
+          - { name: title, label: Title,  type: string }
+          - { name: text,  label: Text,   type: string }
+      - name: whatWeValue
+        label: "What We Value"
+        type: list
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text,  label: Text,  type: string }
+
+  - name: services
+    label: Services
+    type: file
+    path: content/services/index.md
+    fields:
+      - name: services
+        label: Services
+        type: list
+        fields:
+          - { name: num,     label: Number,  type: string }
+          - { name: title,   label: Title,   type: string }
+          - { name: tagline, label: Tagline, type: string }
+          - name: paragraphs
+            label: Paragraphs
+            type: list
+            fields:
+              - { name: value, label: Paragraph, type: string }
+          - name: faq
+            label: FAQ
+            type: list
+            fields:
+              - { name: q, label: Question, type: string }
+              - { name: a, label: Answer,   type: string }
+
+  # ── Collections ───────────────────────────────────────────
+
+  - name: journal
+    label: Journal
+    type: collection
+    path: content/journal
+    exclude: ["_index.md", "popular"]
+    fields:
+      - { name: title,   label: Title,   type: string }
+      - { name: date,    label: Date,    type: date }
+      - { name: summary, label: Summary, type: string }
+      - { name: heroImage, label: "Hero Image", type: image }
+      - { name: categories, label: Categories, type: list }
+      - { name: tags,    label: Tags,    type: list }
+      - { name: draft,   label: Draft,   type: boolean }
+      - { name: body,    label: Content, type: rich-text }

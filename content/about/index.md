@@ -5,10 +5,13 @@ description: "Studio — AI Policy"
 
 pageSubtitle: "Est. 2025 — Independent by choice."
 introHeading: "Design is how we<br>think, not just<br>what we make."
-introBody:
-  - "Vence is a small, independent design studio founded in 2014. We work across brand identity, digital design, motion, and strategy — usually in combination, always with intention."
-  - "We're based between London and Lisbon, and work with clients across Europe, North America, and East Asia. We're deliberately small: six permanent team members, a network of trusted collaborators, and a policy of never taking on more work than we can do well."
-  - "We founded the studio on a single conviction — that the best design comes from genuine understanding of what a client is trying to do and why. Everything else follows from that."
+
+aiPolicy: |
+  We at Three Legged Crow Studio believe that the best way to reach your human audience is through human content.
+
+  The main use cases for AI here at the studio include code checking, audience and SEO research, spell checking, and sugguestions on how to improve the flow of our content.
+
+  That being said, you have the final say on how much AI is used on your project. If you want no AI, you'll get no AI. If you want whole AI written articles, I'll do that for you too.
 
 howWeWork:
   - num: "01"
@@ -39,8 +42,8 @@ whatWeValue:
     text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto."
 ---
 
-We at Three Legged Crow Studio believe that the best way to reach your human audience is through human content.
+Vence is a small, independent design studio founded in 2014. We work across brand identity, digital design, motion, and strategy — usually in combination, always with intention.
 
-The main use cases for AI here at the studio include code checking, audience and SEO research, spell checking, and sugguestions on how to improve the flow of our content.
+We're based between London and Lisbon, and work with clients across Europe, North America, and East Asia. We're deliberately small: six permanent team members, a network of trusted collaborators, and a policy of never taking on more work than we can do well.
 
-That being said, you have the final say on how much AI is used on your project. If you want no AI, you'll get no AI. If you want whole AI written articles, I'll do that for you too.
+We founded the studio on a single conviction — that the best design comes from genuine understanding of what a client is trying to do and why. Everything else follows from that.

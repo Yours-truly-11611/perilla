@@ -10,9 +10,7 @@
   <div class="about__intro">
     <h2 class="about__intro-heading">{{ .Params.introHeading | default "Design is how we<br>think, not just<br>what we make." | safeHTML }}</h2>
     <div class="about__intro-body">
-      {{ range .Params.introBody }}
-      <p>{{ . }}</p>
-      {{ end }}
+      {{ .Content }}
     </div>
   </div>
 
@@ -48,11 +46,11 @@
   {{ end }}
 
   <!-- AI Policy -->
-  {{ with .Content }}
+  {{ with .Params.aiPolicy }}
   <div class="about__ai-policy">
     <h2 class="about__values-heading">AI Policy</h2>
     <div class="about__intro-body">
-      {{ . }}
+      {{ . | markdownify }}
     </div>
   </div>
   {{ end }}

@@ -18,7 +18,7 @@ aiPolicy: |
 howWeWork:
   - num: "01"
     title: "Research first"
-    text: "We don't open a sketchbook until we understand the problem. That means interviews, audits, competitor analysis, and a written strategic brief before any creative work begins."
+    text: "We don't open a file until we understand the problem. That means interviews, audits, competitor analysis, and a written strategic brief before any creative work begins."
   - num: "02"
     title: "Fewer clients, deeper work"
     text: "We cap our active projects to ensure every client gets the attention the work deserves. We'd rather do four things well than eight things adequately."

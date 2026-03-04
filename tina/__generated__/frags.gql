@@ -1,0 +1,87 @@
+fragment HomepageParts on Homepage {
+  __typename
+  heroTitle
+  heroSubtitle
+  heroVideo
+  heroImage
+  menuButtonLabel
+  studio {
+    __typename
+    heading
+    body
+    cta
+    ctaURL
+  }
+  studioImage
+  missionStatement
+  homeServices {
+    __typename
+    num
+    title
+    tagline
+  }
+  process {
+    __typename
+    num
+    title
+    body
+  }
+  faq {
+    __typename
+    q
+    a
+  }
+  statement
+  testimonial {
+    __typename
+    quote
+    author
+    role
+  }
+  testimonialImage
+}
+
+fragment StudioParts on Studio {
+  __typename
+  pageSubtitle
+  introHeading
+  aiPolicy
+  howWeWork {
+    __typename
+    num
+    title
+    text
+  }
+  whatWeValue {
+    __typename
+    title
+    text
+  }
+  body
+}
+
+fragment ServicesParts on Services {
+  __typename
+  services {
+    __typename
+    num
+    title
+    tagline
+    body
+    faq {
+      __typename
+      q
+      a
+    }
+  }
+}
+
+fragment JournalParts on Journal {
+  __typename
+  title
+  date
+  summary
+  heroImage
+  draft
+  body
+}

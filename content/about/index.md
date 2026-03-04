@@ -12,6 +12,8 @@ aiPolicy: |
   The main use cases for AI here at the studio include code checking, audience and SEO research, spell checking, and sugguestions on how to improve the flow of our content.
 
   That being said, you have the final say on how much AI is used on your project. If you want no AI, you'll get no AI. If you want whole AI written articles, I'll do that for you too.
+  
+  Our website design service relies heavily on Claude Code, though rest assured that we have experience coding websites before AI was released in the world.
 
 howWeWork:
   - num: "01"

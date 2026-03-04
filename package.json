@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c \"hugo server\"",
-    "build": "tinacms build && hugo --minify"
+    "build": "node -e \"console.log('TINA_CLIENT_ID set:', !!process.env.TINA_PUBLIC_CLIENT_ID, '| TINA_TOKEN set:', !!process.env.TINA_TOKEN)\" && tinacms build && hugo --minify"
   },
   "dependencies": {
     "@tinacms/cli": "latest",

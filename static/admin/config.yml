@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Yours-truly-11611/perilla
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://perilla-oauth.alexagain-art.workers.dev
 
 media_folder: static/images
 public_folder: /images

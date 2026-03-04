@@ -3,14 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server\"",
-    "build": "tinacms build --skip-cloud-checks && hugo --minify"
-  },
-  "dependencies": {
-    "@tinacms/cli": "latest",
-    "tinacms": "latest"
-  },
-  "devDependencies": {
-    "@types/node": "^25.3.3"
+    "dev": "hugo server",
+    "build": "hugo --minify"
   }
 }

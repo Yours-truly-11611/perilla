@@ -1,0 +1,122 @@
+backend:
+  name: github
+  repo: Yours-truly-11611/perilla
+  branch: main
+  base_url: https://api.netlify.com
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: homepage
+    label: Home
+    files:
+      - name: homepage
+        label: Homepage
+        file: content/_index.md
+        fields:
+          - { name: heroTitle, label: Hero Title, widget: string }
+          - { name: heroSubtitle, label: Hero Subtitle, widget: string }
+          - { name: heroVideo, label: Hero Video Path, widget: string, required: false }
+          - { name: heroImage, label: Hero Image, widget: image, required: false }
+          - { name: menuButtonLabel, label: Hero Button Label, widget: string }
+          - name: studio
+            label: Studio Section
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: cta, label: Button Label, widget: string }
+              - { name: ctaURL, label: Button URL, widget: string }
+          - { name: studioImage, label: Studio Image, widget: image, required: false }
+          - { name: missionStatement, label: Mission Statement, widget: text, required: false }
+          - name: homeServices
+            label: Services Overview
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: tagline, label: Tagline, widget: string }
+          - name: process
+            label: Process
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: faq
+            label: FAQ
+            widget: list
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+          - { name: statement, label: Statement, widget: text, required: false }
+          - name: testimonial
+            label: Testimonial
+            widget: object
+            fields:
+              - { name: quote, label: Quote, widget: text }
+              - { name: author, label: Author, widget: string }
+              - { name: role, label: Role, widget: string }
+          - { name: testimonialImage, label: Testimonial Image, widget: image, required: false }
+
+  - name: studio
+    label: Studio
+    files:
+      - name: studio
+        label: Studio Page
+        file: content/about/index.md
+        fields:
+          - { name: pageSubtitle, label: Page Subtitle, widget: string }
+          - { name: introHeading, label: Intro Heading, widget: string }
+          - { name: aiPolicy, label: AI Policy, widget: text }
+          - name: howWeWork
+            label: How We Work
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - name: whatWeValue
+            label: What We Value
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: body, label: Content, widget: markdown }
+
+  - name: services
+    label: Services
+    files:
+      - name: services
+        label: Services Page
+        file: content/services/index.md
+        fields:
+          - name: services
+            label: Services
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: tagline, label: Tagline, widget: string }
+              - { name: body, label: Body, widget: text }
+              - name: faq
+                label: FAQ
+                widget: list
+                fields:
+                  - { name: q, label: Question, widget: string }
+                  - { name: a, label: Answer, widget: text }
+
+  - name: journal
+    label: Journal
+    folder: content/journal
+    create: true
+    filter: { field: title, pattern: ".+" }
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: heroImage, label: Hero Image, widget: image, required: false }
+      - { name: draft, label: Draft, widget: boolean, default: false }
+      - { name: body, label: Content, widget: markdown }

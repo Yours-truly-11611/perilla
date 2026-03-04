@@ -45,13 +45,19 @@ export default {
         });
       }
 
+      const token = data.access_token;
       const html = `<!doctype html><html><body><script>
-        window.opener.postMessage(
-          'authorization:github:success:' + JSON.stringify({ token: "${data.access_token}", provider: "github" }),
-          '*'
-        );
-        window.close();
-      </script></body></html>`;
+        (function() {
+          function receiveMessage(e) {
+            window.opener.postMessage(
+              'authorization:github:success:{"token":"${token}","provider":"github"}',
+              e.origin
+            );
+          }
+          window.addEventListener("message", receiveMessage, false);
+          window.opener.postMessage("authorizing:github", "*");
+        })();
+      <\/script></body></html>`;
 
       return new Response(html, {
         headers: { "Content-Type": "text/html" },

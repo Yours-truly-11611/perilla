@@ -1,0 +1,13 @@
+{
+  "name": "perilla",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server\"",
+    "build": "tinacms build && hugo --minify"
+  },
+  "dependencies": {
+    "@tinacms/cli": "latest",
+    "tinacms": "latest"
+  }
+}
